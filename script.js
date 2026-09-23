@@ -33,3 +33,92 @@ document.querySelectorAll('[data-project]').forEach(card=>card.addEventListener(
 const range=document.querySelector('#comparison-range');
 range.addEventListener('input',()=>{document.querySelector('.comparison').style.setProperty('--split',`${range.value}%`);range.setAttribute('aria-valuetext',`${range.value} percent wireframe visible`);});
 document.querySelector('#year').textContent=new Date().getFullYear();
+
+// Progressive enhancement: ordinary page scrolling, no scroll interception.
+const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+const revealTargets = document.querySelectorAll('.intro .section-label, .intro h2, .intro-bottom, .section-heading, .project-card, .process-copy, .comparison, .film-heading, .film-preview, .contact-top');
+const stage = document.querySelector('.showcase');
+const stageCanvas = document.querySelector('.stage-canvas');
+const stagePhoto = document.querySelector('.stage-photo');
+const stageTitle = document.querySelector('.stage-title');
+const star = document.querySelector('.orbit-star');
+const track = document.querySelector('.discipline-track');
+const progressLine = document.querySelector('.scroll-progress');
+let revealObserver;
+let motionFrame = 0;
+let motionEnabled = false;
+let manualReducedMotion = false;
+const motionToggle = document.querySelector('.motion-toggle');
+const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
+
+function renderScrollMotion() {
+  motionFrame = 0;
+  if (!motionEnabled) return;
+  const viewport = window.innerHeight;
+  const scrollable = document.documentElement.scrollHeight - viewport;
+  const pageProgress = scrollable > 0 ? clamp(window.scrollY / scrollable) : 0;
+  progressLine.style.transform = `scaleX(${pageProgress})`;
+  // Read only the two scene bounds; artwork cards are handled by the observer.
+  const scene = stage.getBoundingClientRect();
+  const mobile = window.innerWidth <= 700;
+  const distance = Math.max(1, scene.height - viewport * (mobile ? .75 : 1));
+  const sceneProgress = clamp(-scene.top / distance);
+  if (scene.bottom > 0 && scene.top < viewport) {
+    stageCanvas.style.transform = `scale(${(mobile ? .94 : .9) + sceneProgress * (mobile ? .06 : .1)})`;
+    stagePhoto.style.transform = `scale(1.08) translateY(${sceneProgress * -3}%)`;
+    stageTitle.style.transform = `translateY(${(1 - sceneProgress) * 25}px)`;
+  }
+  star.style.transform = `rotate(${-12 + Math.min(window.scrollY, viewport * 2) * .085}deg)`;
+  const band = track.parentElement.getBoundingClientRect();
+  if (band.top < viewport && band.bottom > 0) {
+    const bandProgress = clamp((viewport - band.top) / (viewport + band.height));
+    track.style.transform = `translateX(${-bandProgress * (mobile ? 180 : 430)}px)`;
+  }
+}
+function requestScrollMotion() {
+  if (motionEnabled && !motionFrame) motionFrame = requestAnimationFrame(renderScrollMotion);
+}
+function configureMotion() {
+  revealObserver?.disconnect();
+  if (motionFrame) cancelAnimationFrame(motionFrame);
+  motionFrame = 0;
+  motionEnabled = !motionPreference.matches && !manualReducedMotion && 'IntersectionObserver' in window;
+  document.documentElement.classList.toggle('motion-paused', !motionEnabled);
+  motionToggle.setAttribute('aria-pressed', String(motionEnabled));
+  motionToggle.textContent = motionEnabled ? 'Motion on' : 'Motion off';
+  motionToggle.disabled = motionPreference.matches;
+  document.documentElement.classList.toggle('motion-ready', motionEnabled);
+  if (!motionEnabled) {
+    revealTargets.forEach(element => element.classList.add('is-visible'));
+    [stageCanvas, stagePhoto, stageTitle, star, track, progressLine].forEach(element => element.style.removeProperty('transform'));
+    return;
+  }
+  revealObserver = new IntersectionObserver(entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('is-visible');
+        revealObserver.unobserve(entry.target);
+      }
+    });
+  }, { threshold: .08, rootMargin: '0px 0px -25px 0px' });
+  revealTargets.forEach((element) => {
+    element.dataset.reveal = '';
+    if (element.matches('.project-card.offset')) element.style.setProperty('--reveal-delay', '100ms');
+    revealObserver.observe(element);
+  });
+  requestScrollMotion();
+}
+window.addEventListener('scroll', requestScrollMotion, { passive: true });
+window.addEventListener('resize', requestScrollMotion, { passive: true });
+motionPreference.addEventListener('change', configureMotion);
+// Keyboard navigation never lands on visually hidden content.
+document.addEventListener('focusin', event => event.target.closest('[data-reveal]')?.classList.add('is-visible'));
+document.querySelectorAll('[data-filter]').forEach(button => button.addEventListener('click', () => {
+  document.querySelectorAll('.project-card:not([hidden])').forEach(card => card.classList.add('is-visible'));
+  requestScrollMotion();
+}));
+motionToggle.addEventListener('click', () => {
+  manualReducedMotion = !manualReducedMotion;
+  configureMotion();
+});
+configureMotion();

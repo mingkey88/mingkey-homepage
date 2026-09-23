@@ -32,6 +32,10 @@ GitHub Pages serves the root of `main`. Commit and push changes to update the si
 
 The homepage is complete. Separate portfolio, about and case-study pages are intentionally left for the next phase. Current navigation goes to homepage sections; artwork opens a detail dialog, with clearly labelled links to the original portfolio. Contact links use email rather than a non-functional form.
 
+## Motion and creative direction
+
+Updated 23 September 2026 following the user’s request for a creative-agency feel. The new design uses oversized editorial typography, acid lime, a scroll-expanding artwork scene, parallax, staggered reveals and a moving text band. Motion follows native scrolling. The footer provides a motion toggle, and the OS reduced-motion setting is respected.
+
 ## Content and design
 
-The user selected Wix's Architectural Rendering Studio (Futuristic) template, option 1, as the visual direction. This is an independent static implementation using that direction: split-screen hero, warm ivory and brown, large art panels and restrained typography. No Wix runtime or template imagery is included. Artwork belongs to its respective rights holders; no blanket open-source licence is granted for the portfolio images.
+The user selected Wix's Architectural Rendering Studio (Futuristic) template, option 1, as the visual direction. That template informed the initial version; the later creative-agency direction supersedes its split-screen hero and restrained typography. No Wix runtime or template imagery is included. Artwork belongs to its respective rights holders; no blanket open-source licence is granted for the portfolio images.

@@ -25,3 +25,14 @@ Checked 22 September 2026.
 - Accessibility checks are limited to structure, focus behavior, keyboard controls, image alternatives and reduced-motion CSS; this is not a formal accessibility certification.
 
 Result: homepage ready for review and continuation.
+
+
+## Creative-agency refresh — 23 September 2026
+
+- New typography, palette, scroll artwork stage and editorial sections visually checked on desktop and phone layouts.
+- Native scroll updates verified: artwork canvas progressed from scale 0.957 to 1, image parallax to -3%, graphic rotation changed, and the text band translated with scrolling.
+- Section reveals observed; gallery filters still reveal the correct matching projects. Artwork dialog and Escape behavior rechecked.
+- Mobile menu navigates and closes. Narrow-screen heading overflow was corrected; at 320px the document fits the 305px content viewport (15px scrollbar), without horizontal overflow.
+- Footer motion toggle tested both ways. Motion-off removes the motion class, changes the artwork stage to non-sticky positioning and leaves zero hidden reveal targets. OS reduced-motion uses the same disabled-motion branch plus CSS media rules; the OS setting itself was not changed during testing.
+- Browser error log empty during local checks. JavaScript syntax check passed.
+- Styles/scripts use a version query to avoid mixing old cached presentation files with the revised markup.

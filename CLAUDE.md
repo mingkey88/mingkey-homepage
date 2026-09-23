@@ -10,17 +10,21 @@ Reference template: https://www.wix.com/website-template/view/html/wh-1404
 Template name: Architectural Rendering Studio (Futuristic), Aura Synthesis.
 User's other site, for quality reference: https://mingkey88.github.io/superiso-homepage/
 
-## Design to preserve
+## Design to preserve — updated 23 September 2026
 
-Warm ivory `#f7f4eb`, dark brown `#27241e`, muted olive-grey accents; minimal Helvetica/Arial typography, large tightly spaced headings, generous whitespace, rectangular imagery and an asymmetric two-column project grid. The desktop hero puts artwork on the left and a centred statement on the right. On phones it stacks text above the artwork.
+The user subsequently asked for a creative-agency feel with scroll animations and authorized continuing with it. This supersedes the original split-screen template direction.
 
-The homepage uses the user's real artwork, including the Companion painting as the hero. Do not replace it with generic stock images or architecture. No registered trademark claim is intended by the decorative asterisk in the wordmark.
+Use oversized uppercase editorial typography, italic serif contrasts, off-white `#eeeee6`, dark green-black `#1d211d`, and acid lime `#d3fb50`. The hero reads “MAKE IT UNEXPECTED.” A featured Companion artwork scene expands on scroll, followed by a dark introduction, a lime moving text band, a staggered project grid, process and film sections, and a lime contact section.
+
+Maintain the identity as Mingjie's independent creative practice; do not invent a team, agency clients or credentials. Use the actual portfolio artwork.
+
+Motion uses native scrolling, requestAnimationFrame and IntersectionObserver with no animation dependency or scroll interception. Headline entry, artwork expansion/parallax, graphic rotation, text-band movement, project reveals and a reading-progress line are implemented. Effects are reduced on mobile. OS reduced-motion and the footer motion toggle disable animation and sticky staging; content stays visible with JavaScript disabled. Keep keyboard focus revealing its containing section. Filters explicitly reveal matching cards.
 
 ## Current implementation
 
 Plain static HTML/CSS/JS. No framework, build step, server backend or secrets. Hosted from the `main` branch root via GitHub Pages. Keep paths relative; nested pages must account for their directory depth. Prefer `work/index.html`, `about/index.html`, and `work/project-name/index.html` routes that work as static directories. Do not introduce history-based SPA routing without a Pages-compatible plan.
 
-Working features: category filters, six project dialogs, responsive mobile menu, keyboard-operable render/wireframe range comparison, film links to YouTube, mailto contact, reduced-motion support, focus styles and native dialog focus management. The film opens directly on YouTube in a new tab; there is no embedded third-party player. A dynamic embed remained blank during local browser testing, so it was replaced with an explicit direct link. Primary navigation currently points to homepage anchors.
+Working features: category filters, six project dialogs, responsive mobile menu, keyboard-operable render/wireframe range comparison, film links to YouTube, mailto contact, reduced-motion support and a footer motion toggle, focus styles and native dialog focus management. The film opens directly on YouTube in a new tab; there is no embedded third-party player. A dynamic embed remained blank during local browser testing, so it was replaced with an explicit direct link. Primary navigation currently points to homepage anchors.
 
 Project metadata is in the `projects` object in `script.js`; cards are in `index.html`. If expanding the portfolio, centralize the data to avoid maintaining both manually. `assets/sources.json` gives source URLs for full originals. Shipped artwork is optimized WebP, up to 1800px. All visible project descriptions are short editorial summaries of the artwork, not verified production credits or dates.
 
