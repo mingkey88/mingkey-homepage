@@ -1,38 +1,31 @@
-# Homepage checks
+# Site checks
 
-Checked 22 September 2026.
+## Full site build — 23 September 2026
 
-## Passed
+Checked locally in headless Chromium against `python3 -m http.server`, including a copy served under `/mingkey-homepage/` to match GitHub Pages.
 
-- JavaScript syntax check with `node --check script.js`.
-- All local HTML asset references exist; all homepage fragment links resolve to an element.
-- Browser inspection at desktop and mobile widths. Narrow-screen hero overflow found and corrected; document width equals viewport width at 320px locally and 319px in the published preview. The 390px phone layout and 992px desktop layout were visually inspected.
-- Gallery filtering: All = 6, 3D = 3, Illustration = 2, Motion = 1. Pressed state and live status text update.
-- Project detail dialog opens with correct artwork and description; Escape closes it and returns focus to the card.
-- Comparison slider responds to keyboard End, Home and arrow keys, and updates the split percentage and accessible value text.
-- Mobile menu opens, navigates to the requested section and closes. Verified on the published HTTPS site.
-- Loaded images have nonzero natural dimensions; no broken image detected in local or live checks.
-- No browser error-level messages in local checks.
-- Film link opens the original YouTube page, titled WTFO, by Tan Ming Jie. Playback controls are present. A full end-to-end viewing of the film was not performed.
-- GitHub Pages build completed successfully, and the live homepage was opened in the browser.
+### Passed
 
-## Scope and limitations
+- `node --check` on `script.js` and `tools/build.mjs`; the build regenerates all pages without errors.
+- Link crawl of all 19 pages under `/mingkey-homepage/`: 108 unique local links, images and `srcset` sources return 200; no duplicate IDs; every WebP in `assets/` is referenced.
+- No horizontal overflow on any page at 320, 390, 768 or 1024px. One overflow (next-project title at 320px) was found and fixed.
+- Desktop (1440px) and phone (390px) layouts visually reviewed for the homepage, work index, several case studies (film, gallery, single painting, graphic design), About and Contact.
+- Homepage filters: All 6, 3D 3, Illustration 2, Motion 1; status text updates; cards link to case studies; comparison slider responds to the keyboard.
+- Work index filters: All 14, 3D & sculpture 7, Illustration 7, Graphic design 1, Motion 2. `work/#illustration` opens pre-filtered; clicking a filter updates the address; unknown hashes show everything.
+- Lightbox: opens from the keyboard, arrow keys move and wrap, the counter and caption update, the full-size image loads, the page behind is scroll-locked, and Escape closes it and returns focus to the thumbnail. Single-image projects hide previous/next.
+- Mobile menu opens and navigates from a nested page.
+- Motion toggle switches motion off, and the choice carries over to the next page. With OS reduced motion emulated, motion is paused, the toggle is disabled and nothing is hidden.
+- With JavaScript disabled, all cards, gallery items and text are visible; gallery links open the full image directly; the copy-email button stays hidden.
+- Copy-email button writes the address to the clipboard and announces it.
+- 404 page loads its styles and assets from `/mingkey-homepage/`, and its links resolve.
+- No browser console errors.
 
-- This is the homepage phase. Full galleries, individual case studies, dedicated About and Contact pages remain for Claude.
-- The film deliberately opens on YouTube. An embedded player remained blank in the test browser, so the final implementation uses an explicit external link.
-- Contact uses mailto. No email was sent during testing, and no contact-form backend exists.
-- Project descriptions are brief visual/editorial summaries. The original portfolio is the source for facts; additional production credits and dates should be verified with the user before adding them.
-- Accessibility checks are limited to structure, focus behavior, keyboard controls, image alternatives and reduced-motion CSS; this is not a formal accessibility certification.
+### Not tested here
 
-Result: homepage ready for review and continuation.
+- External video links (YouTube, Vimeo) were confirmed to exist via their oEmbed endpoints; playback was not tested.
+- The browser could not reach the live site from this environment. Recheck the published pages after GitHub Pages deploys.
+- Not a formal accessibility audit: structure, keyboard behaviour, focus handling, alt text and motion preferences were checked.
 
+## Homepage phase — 22 September 2026
 
-## Creative-agency refresh — 23 September 2026
-
-- New typography, palette, scroll artwork stage and editorial sections visually checked on desktop and phone layouts.
-- Native scroll updates verified: artwork canvas progressed from scale 0.957 to 1, image parallax to -3%, graphic rotation changed, and the text band translated with scrolling.
-- Section reveals observed; gallery filters still reveal the correct matching projects. Artwork dialog and Escape behavior rechecked.
-- Mobile menu navigates and closes. Narrow-screen heading overflow was corrected; at 320px the document fits the 305px content viewport (15px scrollbar), without horizontal overflow.
-- Footer motion toggle tested both ways. Motion-off removes the motion class, changes the artwork stage to non-sticky positioning and leaves zero hidden reveal targets. OS reduced-motion uses the same disabled-motion branch plus CSS media rules; the OS setting itself was not changed during testing.
-- Browser error log empty during local checks. JavaScript syntax check passed.
-- Styles/scripts use a version query to avoid mixing old cached presentation files with the revised markup.
+The original homepage checks (filters, slider, mobile menu, published HTTPS site, GitHub Pages build) passed at the time. The project dialog tested then has since been replaced by links to the case-study pages.

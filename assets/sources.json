@@ -1,19 +1,107 @@
 [
   {
-    "file": "assets/hydra.webp",
-    "source": "https://static.wixstatic.com/media/73c069_2df23cd1c25d457497828275ae1aa346.jpg"
+    "file": "assets/alien-mechanic.webp",
+    "source": "https://static.wixstatic.com/media/73c069_e5c1d394b63b4313ac7ba2aa92b70da6.jpg"
   },
   {
-    "file": "assets/spartan.webp",
-    "source": "https://static.wixstatic.com/media/73c069_086f941b1624402ca4634eaeff3c1aeb.jpg"
+    "file": "assets/alien-sketches.webp",
+    "source": "https://static.wixstatic.com/media/73c069_510d160e3d3b473eb70a39dbc70a3780.jpg"
+  },
+  {
+    "file": "assets/alien-turnaround.webp",
+    "source": "https://static.wixstatic.com/media/73c069_02b707b3ccb142fe999cd5755310e9f6.jpg"
+  },
+  {
+    "file": "assets/alien-action.webp",
+    "source": "https://static.wixstatic.com/media/73c069_292de5fabc71443fa9ec930d938a1756.jpg"
+  },
+  {
+    "file": "assets/alien-emotes.webp",
+    "source": "https://static.wixstatic.com/media/73c069_45602ceecc8e434da0a3db42daffb62f.jpg"
+  },
+  {
+    "file": "assets/wtfo-environment.webp",
+    "source": "https://static.wixstatic.com/media/73c069_88f2a96f31ca4a5d81a5487b5ac95e33.jpg"
+  },
+  {
+    "file": "assets/wtfo-hangar.webp",
+    "source": "https://static.wixstatic.com/media/73c069_f9eaef589d2a4c75842053af81cebf85.jpg"
+  },
+  {
+    "file": "assets/wtfo-ufo.webp",
+    "source": "https://static.wixstatic.com/media/73c069_9fceffa8c2b541ddbd2a786cbc611ea2.jpg"
+  },
+  {
+    "file": "assets/alien-tpose.webp",
+    "source": "https://static.wixstatic.com/media/73c069_95cc2b502e204b809cfb3d480cc398cf.jpg"
+  },
+  {
+    "file": "assets/alien-wire.webp",
+    "source": "https://static.wixstatic.com/media/73c069_15e7b2a942074a0199de43643dd9bbb8.jpg"
+  },
+  {
+    "file": "assets/ararush-painting.webp",
+    "source": "https://static.wixstatic.com/media/73c069_04a32e0515a74c8ba0c72e4d209e7c9a.jpg"
   },
   {
     "file": "assets/ararush.webp",
     "source": "https://static.wixstatic.com/media/73c069_bcf863daf115400087ae6ed6c6a5a2e2.jpg"
   },
   {
+    "file": "assets/hydra.webp",
+    "source": "https://static.wixstatic.com/media/73c069_2df23cd1c25d457497828275ae1aa346.jpg"
+  },
+  {
+    "file": "assets/hydra-2.webp",
+    "source": "https://static.wixstatic.com/media/73c069_a8d2caf9037b481da391896b03cfa96e.jpg"
+  },
+  {
+    "file": "assets/hydra-3.webp",
+    "source": "https://static.wixstatic.com/media/73c069_c0ae96c5327f4a7b8b6dedd4c4cb8b9b.jpg"
+  },
+  {
+    "file": "assets/hydra-4.webp",
+    "source": "https://static.wixstatic.com/media/73c069_dd07551de8dc4daa9b18196ebda9051b.jpg"
+  },
+  {
+    "file": "assets/dohva-1.webp",
+    "source": "https://static.wixstatic.com/media/73c069_ef001b13d82748cb9e6b62eea846ebed.jpg"
+  },
+  {
+    "file": "assets/dohva-2.webp",
+    "source": "https://static.wixstatic.com/media/73c069_74381833aa554488ba79a7b9fd7d351f.jpg"
+  },
+  {
+    "file": "assets/dohva-3.webp",
+    "source": "https://static.wixstatic.com/media/73c069_b49307cfe629468abbbd8f68fa6c1a4e.jpg"
+  },
+  {
     "file": "assets/350z.webp",
     "source": "https://static.wixstatic.com/media/73c069_a734af46adc7435db630d7b1fa3a6dbe.jpg"
+  },
+  {
+    "file": "assets/350z-rear.webp",
+    "source": "https://static.wixstatic.com/media/73c069_2e00ed12af0241b3a156726d4ea0d7c8.jpg"
+  },
+  {
+    "file": "assets/car-wire.webp",
+    "source": "https://static.wixstatic.com/media/73c069_9b625624f2c44b8f9f798ecde7883c1d.jpg"
+  },
+  {
+    "file": "assets/spartan.webp",
+    "source": "https://static.wixstatic.com/media/73c069_086f941b1624402ca4634eaeff3c1aeb.jpg"
+  },
+  {
+    "file": "assets/spartan-painting.webp",
+    "source": "https://static.wixstatic.com/media/73c069_e6e2565daa044865ac330751e1d6d61f.jpg"
+  },
+  {
+    "file": "assets/console.webp",
+    "source": "https://static.wixstatic.com/media/73c069_8e294cba3a8c4d29954c97234e032f05.jpg"
+  },
+  {
+    "file": "assets/fatman.webp",
+    "source": "https://static.wixstatic.com/media/73c069_602e46f0b3d9415ebddaac301bec676d.jpg"
   },
   {
     "file": "assets/companion.webp",
@@ -24,15 +112,73 @@
     "source": "https://static.wixstatic.com/media/73c069_2c4373006d78452aa684d235510fcaed.jpg"
   },
   {
-    "file": "assets/alien-wire.webp",
-    "source": "https://static.wixstatic.com/media/73c069_15e7b2a942074a0199de43643dd9bbb8.jpg"
+    "file": "assets/kate.webp",
+    "source": "https://static.wixstatic.com/media/73c069_21c8fd98b7584832a7a3f2938db786df.jpg"
   },
   {
-    "file": "assets/console.webp",
-    "source": "https://static.wixstatic.com/media/73c069_8e294cba3a8c4d29954c97234e032f05.jpg"
+    "file": "assets/king-kong.webp",
+    "source": "https://static.wixstatic.com/media/73c069_341c50f29fe64c68ba81d754e25f99a1.jpg"
   },
   {
-    "file": "assets/car-wire.webp",
-    "source": "https://static.wixstatic.com/media/73c069_9b625624f2c44b8f9f798ecde7883c1d.jpg"
+    "file": "assets/transformers.webp",
+    "source": "https://static.wixstatic.com/media/73c069_9109e15f3e1340a9a962512043b48833.jpg"
+  },
+  {
+    "file": "assets/ad-scan.webp",
+    "source": "https://static.wixstatic.com/media/73c069_221089a34503488ab29c0d32204e21fb.png"
+  },
+  {
+    "file": "assets/ad-phones.webp",
+    "source": "https://static.wixstatic.com/media/73c069_388ee3fc48674e1a9e040453e22e37aa.png"
+  },
+  {
+    "file": "assets/ad-download.webp",
+    "source": "https://static.wixstatic.com/media/73c069_33104fe2d39b4c339858fa6d26ff1075.png"
+  },
+  {
+    "file": "assets/app-tablet.webp",
+    "source": "https://static.wixstatic.com/media/73c069_e793ddb985b2468798cb0b844bc9c7fb.jpg"
+  },
+  {
+    "file": "assets/app-screen.webp",
+    "source": "https://static.wixstatic.com/media/73c069_9d25417a9c2e47159d0c7122877e5afb.jpg"
+  },
+  {
+    "file": "assets/banner-set.webp",
+    "source": "https://static.wixstatic.com/media/73c069_d5016ff8b2d14c6f9f72bd4b44e327b6.jpg"
+  },
+  {
+    "file": "assets/banner-skyscraper.webp",
+    "source": "https://static.wixstatic.com/media/73c069_504e24b774034a6b83c75efb9b37a43d.jpg"
+  },
+  {
+    "file": "assets/video-wtfo.webp",
+    "source": "https://i.ytimg.com/vi/ilIMWmxm-Jc/maxresdefault.jpg",
+    "note": "Video thumbnail"
+  },
+  {
+    "file": "assets/video-alien-mechanic.webp",
+    "source": "https://i.ytimg.com/vi/BSt10vJLwTQ/maxresdefault.jpg",
+    "note": "Video thumbnail"
+  },
+  {
+    "file": "assets/video-350z.webp",
+    "source": "https://i.ytimg.com/vi/EltDg5dhV0I/maxresdefault.jpg",
+    "note": "Video thumbnail"
+  },
+  {
+    "file": "assets/video-hydra.webp",
+    "source": "https://i.ytimg.com/vi/Df1Sz7spdX0/maxresdefault.jpg",
+    "note": "Video thumbnail"
+  },
+  {
+    "file": "assets/video-dohva.webp",
+    "source": "https://i.ytimg.com/vi/grxExYOStyw/maxresdefault.jpg",
+    "note": "Video thumbnail"
+  },
+  {
+    "file": "assets/video-saikokira.webp",
+    "source": "https://vimeo.com/84110618",
+    "note": "Vimeo thumbnail"
   }
 ]
