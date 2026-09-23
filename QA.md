@@ -1,5 +1,18 @@
 # Site checks
 
+## Studio-style redesign — 23 September 2026
+
+Checked locally in headless Chromium, including a copy served under `/mingkey-homepage/`.
+
+- 42 automated browser checks pass: font loads; homepage shows the 6 featured cards linking to case studies; Grid/List toggle works and is remembered on the next page; comparison slider keyboard; film stage links to YouTube in a new tab; motion toggle stops marquees and is remembered; work filters (All 14, 3D & sculpture 7, Illustration 7, Graphic design 1, Motion 2) with shareable hash; lightbox keyboard, wrap-around, focus return and single-image mode; Explore more shows 2 cards; phone menu opens full screen, locks scroll, closes on Escape with focus returned, and navigates; copy email; compose form stays on the page, explains what happens and blocks empty submits; no console errors.
+- OS reduced motion: motion paused, toggle disabled, marquees stopped, nothing hidden.
+- JavaScript disabled: all content visible on home, work, a case study, About and Contact; JS-only controls stay hidden.
+- No horizontal scroll at 320, 390, 768 or 1024px on any of the 19 pages (marquees and hero images are clipped on purpose).
+- Link crawl under `/mingkey-homepage/`: 113 unique local links, images and `srcset` sources return 200; no duplicate IDs; 404 page loads its styles, font and links.
+- Desktop (1440px) and phone (390px) screenshots reviewed for every page type, plus the phone menu, list view and film stage.
+- Not tested: the compose form opening a real email app (headless browsers have none), video playback, and the live site before deployment.
+
+
 ## Full site build — 23 September 2026
 
 Checked locally in headless Chromium against `python3 -m http.server`, including a copy served under `/mingkey-homepage/` to match GitHub Pages.

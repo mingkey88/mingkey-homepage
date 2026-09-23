@@ -15,31 +15,63 @@
   <meta property="og:image" content="https://mingkey88.github.io/mingkey-homepage/assets/companion.webp">
   <meta name="twitter:card" content="summary_large_image">
   <link rel="icon" href="../favicon.svg" type="image/svg+xml">
-  <link rel="stylesheet" href="../styles.css?v=site-4">
-  <script src="../script.js?v=site-4" defer></script>
+  <link rel="preload" href="../assets/fonts/OverusedGrotesk-VF.woff2" as="font" type="font/woff2" crossorigin>
+  <link rel="stylesheet" href="../styles.css?v=brave-1">
+  <script src="../script.js?v=brave-1" defer></script>
 </head>
 <body>
   <div class="scroll-progress" aria-hidden="true"></div>
   <a class="skip-link" href="#main">Skip to content</a>
   <header class="site-header" id="top">
-    <a class="wordmark" href="../" aria-label="Mingkey home">mingkey<span class="brand-dot" aria-hidden="true">✳</span></a>
-    <span class="header-note">INDEPENDENT MIND. UNEXPECTED IDEAS.</span>
-    <button class="menu-toggle" aria-expanded="false" aria-controls="navigation">Menu <span aria-hidden="true">+</span></button>
-    <nav id="navigation" aria-label="Main navigation"><a href="../work/">Work</a><a href="../about/">About</a><a href="../contact/" aria-current="page">Let’s talk <span aria-hidden="true">↗</span></a></nav>
+    <a class="wordmark" href="../" aria-label="Mingkey home">Mingkey<span aria-hidden="true">✳</span></a>
+    <span class="coords"><svg viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="9.5"/><path d="M2.5 12h19M12 2.5c2.6 2.8 3.9 6 3.9 9.5s-1.3 6.7-3.9 9.5c-2.6-2.8-3.9-6-3.9-9.5s1.3-6.7 3.9-9.5z"/></svg>1.3521° N, 103.8198° E</span>
+    <nav id="navigation" aria-label="Main navigation"><a href="../">Home</a><a href="../work/">Work</a><a href="../about/">About</a><a href="../contact/" aria-current="page">Contact</a></nav>
+    <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="navigation"><span class="sr-only">Menu</span><span class="menu-lines" aria-hidden="true"></span></button>
   </header>
   <main id="main">
-    <section class="page-hero contact-page" aria-labelledby="page-title">
-      <div class="hero-topline"><span class="eyebrow"><span class="small-dot"></span> CONTACT / SAY HELLO</span><span class="eyebrow">BASED IN SINGAPORE.<br>OPEN TO A GOOD CONVERSATION.</span></div>
-      <h1 class="page-title" id="page-title"><span class="hero-line"><span>Got a</span></span><span class="hero-line"><span><em>what if?</em></span></span></h1>
-      <div class="contact-panel">
-        <div class="contact-email"><p class="section-label">EMAIL IS THE BEST WAY TO REACH ME</p><a class="contact-address" href="mailto:mingjie.tan88@gmail.com?subject=Hello%20Mingjie">mingjie.tan88@gmail.com</a><div class="contact-actions"><a class="pill-link" href="mailto:mingjie.tan88@gmail.com?subject=Hello%20Mingjie">Write an email <span aria-hidden="true">↗</span></a><button class="pill-link copy-email" type="button" data-copy="mingjie.tan88@gmail.com" hidden>Copy address</button><span class="copy-status" role="status" aria-live="polite"></span></div></div>
-        <div class="contact-notes"><p class="section-label">A GOOD FIRST MESSAGE</p><ol><li><span class="project-number">01</span>The idea, character or world you have in mind.</li><li><span class="project-number">02</span>Where it will live: screen, print, film or something else.</li><li><span class="project-number">03</span>Any timing I should know about.</li></ol></div>
+    <section class="contact-hero section" aria-labelledby="page-title">
+      <div class="contact-intro">
+        <h1 class="giant" id="page-title"><span class="hero-line"><span>Let’s work</span></span><span class="hero-line"><span>together</span></span></h1>
+        <p class="indent">Got a what if? Whether it’s a character, a creature or a whole world, drop me a line and tell me about it.</p>
+        <a class="contact-email" href="mailto:mingjie.tan88@gmail.com?subject=Hello%20Mingjie">mingjie.tan88@gmail.com</a>
+      </div>
+      <a class="contact-art" href="../work/sinister-sunny/" aria-label="Sinister Sunny: see the project"><img src="../assets/thumbs/sunny.webp" srcset="../assets/thumbs/sunny.webp 849w, ../assets/sunny.webp 1273w" sizes="(max-width: 760px) 100vw, 40vw" alt="Sinister Sunny, a girl in a red dress holding a small doll, lit from behind" width="849" height="1200" loading="lazy"></a>
+    </section>
+    <section class="info dark section" aria-labelledby="info-title">
+      <h2 class="sr-only" id="info-title">Ways to reach me</h2>
+      <div class="info-cards">
+        <div class="step-card"><div class="step-inner"><div class="step-head"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M5 9h30v22H5z"/><path d="M5 9l15 12L35 9"/></svg><strong>Email</strong></div><div class="step-body"><p>The best way to reach me.</p><a href="mailto:mingjie.tan88@gmail.com?subject=Hello%20Mingjie">mingjie.tan88@gmail.com</a><button class="copy-email" type="button" data-copy="mingjie.tan88@gmail.com" hidden>Copy address</button><span class="copy-status" role="status" aria-live="polite"></span></div></div></div>
+        <div class="step-card"><div class="step-inner"><div class="step-head"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M20 36s11-11.5 11-20a11 11 0 00-22 0c0 8.5 11 20 11 20z"/><circle cx="20" cy="16" r="4"/></svg><strong>Based in</strong></div><div class="step-body"><p>Singapore (GMT+8).</p><p>1.3521° N, 103.8198° E</p></div></div></div>
+        <div class="step-card"><div class="step-inner"><div class="step-head"><svg viewBox="0 0 40 40" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.6"><path d="M6 6h12v12H6zM22 6h12v12H22zM6 22h12v12H6zM22 22h12v12H22z"/></svg><strong>The work</strong></div><div class="step-body"><p>14 projects across 3D, illustration, design and motion.</p><a href="../work/">Browse the archive ↗</a></div></div></div>
       </div>
     </section>
-    <section class="contact-art" aria-label="From the archive">
-      <a href="../work/companion/"><img src="../assets/thumbs/companion.webp" srcset="../assets/thumbs/companion.webp 960w, ../assets/companion.webp 1800w" sizes="100vw" alt="Companion: an armoured dragon alongside a warrior, painted in warm amber tones" width="960" height="679" loading="lazy"><span class="stage-caption"><span>FROM THE ARCHIVE / COMPANION</span><span>SEE THE PROJECT ↗</span></span></a>
+    <section class="compose section" aria-labelledby="compose-title">
+      <div class="marquee marquee-ink" aria-hidden="true"><div class="marquee-track"><span>Write to me</span><span class="marquee-star">✳</span><span>Write to me</span><span class="marquee-star">✳</span><span>Write to me</span><span class="marquee-star">✳</span><span>Write to me</span><span class="marquee-star">✳</span><span>Write to me</span><span class="marquee-star">✳</span><span>Write to me</span><span class="marquee-star">✳</span><span>Write to me</span><span class="marquee-star">✳</span><span>Write to me</span><span class="marquee-star">✳</span></div></div>
+      <div class="compose-grid">
+        <div><h2 class="compose-title" id="compose-title">Write your message here</h2><p class="indent">When you press the button, your email app opens with the message ready to send. Nothing is sent from this page.</p></div>
+        <form class="compose-form" action="mailto:mingjie.tan88@gmail.com" method="get" data-email="mingjie.tan88@gmail.com">
+          <label>Your name<input name="name" autocomplete="name" required></label>
+          <label>Subject<input name="subject" value="Hello Mingjie" required></label>
+          <label>Message<textarea name="body" rows="6" required></textarea></label>
+          <button class="pill" type="submit">Open in my email app <svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.7 6.3 5.7 11.3 12 12-6.3.7-11.3 5.7-12 12-.7-6.3-5.7-11.3-12-12C6.3 11.3 11.3 6.3 12 0z" fill="currentColor"/></svg></button>
+          <p class="compose-status" role="status" aria-live="polite"></p>
+        </form>
+      </div>
     </section>
   </main>
-  <footer class="contact section-pad footer-slim" id="contact"><div class="footer-bottom"><a href="../" class="wordmark">mingkey<span class="brand-dot" aria-hidden="true">✳</span></a><nav class="footer-nav" aria-label="Footer"><a href="../work/">Work</a><a href="../about/">About</a><a href="../contact/">Contact</a></nav><span>© <span id="year">2026</span> Mingjie Tan</span><button class="motion-toggle" type="button" aria-pressed="true">Motion on</button><a href="#top">Back to top <span aria-hidden="true">↑</span></a></div></footer>
+  <footer class="site-footer">
+    <div class="footer-top">
+      <div class="footer-cta"><p>Got a what if?</p><a class="pill pill-light pill-small" href="../contact/">Let’s talk <svg class="star" viewBox="0 0 24 24" aria-hidden="true"><path d="M12 0c.7 6.3 5.7 11.3 12 12-6.3.7-11.3 5.7-12 12-.7-6.3-5.7-11.3-12-12C6.3 11.3 11.3 6.3 12 0z" fill="currentColor"/></svg></a></div>
+      <nav class="footer-nav" aria-label="Footer"><a href="../work/">Work</a><a href="../about/">About</a><a href="../contact/">Contact</a></nav>
+      <div class="footer-contact"><a href="mailto:mingjie.tan88@gmail.com">mingjie.tan88@gmail.com</a><span>Based in Singapore</span></div>
+      <a class="back-top" href="#top"><span aria-hidden="true">↑</span>Back to top</a>
+    </div>
+    <div class="footer-mark">
+      <div class="marquee" aria-hidden="true"><div class="marquee-track"><span>Mingkey</span><span class="marquee-star">✳</span><span>Mingkey</span><span class="marquee-star">✳</span><span>Mingkey</span><span class="marquee-star">✳</span><span>Mingkey</span><span class="marquee-star">✳</span><span>Mingkey</span><span class="marquee-star">✳</span><span>Mingkey</span><span class="marquee-star">✳</span><span>Mingkey</span><span class="marquee-star">✳</span><span>Mingkey</span><span class="marquee-star">✳</span><span>Mingkey</span><span class="marquee-star">✳</span><span>Mingkey</span><span class="marquee-star">✳</span></div></div>
+      <div class="marquee marquee-reverse" aria-hidden="true"><div class="marquee-track"><span>Make it unexpected</span><span class="marquee-star">✳</span><span>Make it unexpected</span><span class="marquee-star">✳</span><span>Make it unexpected</span><span class="marquee-star">✳</span><span>Make it unexpected</span><span class="marquee-star">✳</span><span>Make it unexpected</span><span class="marquee-star">✳</span><span>Make it unexpected</span><span class="marquee-star">✳</span></div></div>
+      <a class="talk-badge" href="../contact/" aria-label="Let’s talk: go to the contact page"><svg class="badge-ring" viewBox="0 0 200 200" aria-hidden="true"><defs><path id="badge-circle" d="M100 100m-74 0a74 74 0 1 1 148 0a74 74 0 1 1-148 0"/></defs><text><textPath href="#badge-circle" textLength="462" lengthAdjust="spacing">LET’S TALK • SAY HELLO • LET’S TALK • SAY HELLO •</textPath></text></svg><span aria-hidden="true">↗</span></a>
+    </div>
+    <div class="footer-bottom"><span>© <span id="year">2026</span> Mingjie Tan</span><span>CG artist, Singapore</span><button class="motion-toggle" type="button" aria-pressed="true">Motion on</button></div>
+  </footer>
 </body>
 </html>

@@ -12,27 +12,30 @@ User's other site, for quality reference: https://mingkey88.github.io/superiso-h
 
 ## Design to preserve — updated 23 September 2026
 
-The user subsequently asked for a creative-agency feel with scroll animations and authorized continuing with it. This supersedes the original split-screen template direction.
+Current direction (requested by the user on 23 September 2026): the layout language of the Studio Brave Webflow template (https://studio-brave.webflow.io/), in an earthy orange palette. It supersedes the earlier creative-agency version and the original Wix template reference. Brave is a paid template, so the site recreates its layout ideas in original code; never copy its code, images, copy or font files from its CDN.
 
-Use oversized uppercase editorial typography and italic serif contrasts. Palette (earthy, since 23 September 2026, replacing the original lime): cream `--paper #f1ebe1`, espresso `--ink #2a1e16`, burnt orange `--accent #e0703a`, deeper orange `--accent-deep #a8441a` for small accents on cream, sand `--panel #e7ddcd`. All colours are CSS variables in `:root` in `styles.css`; ink on the accent is about 5:1 contrast, so keep text on orange dark. The hero reads “MAKE IT UNEXPECTED.” A featured Companion artwork scene expands on scroll, followed by a dark introduction, an orange moving text band, a staggered project grid, process and film sections, and an orange contact section.
+- Type: Overused Grotesk (SIL OFL, self-hosted in `assets/fonts/` with `OFL.txt`), giant uppercase headings with tight leading, small uppercase labels, first-line indents on paragraphs. No serif.
+- Palette: cream `--paper #f1ebe1`, espresso `--ink #2a1e16`, burnt orange `--accent #e0703a`, `--accent-deep #a8441a` for small accents on cream, sand `--panel #e7ddcd`, deep `--shade #1a120c` for the footer and image backgrounds. All colours are CSS variables in `:root`; ink on the accent is about 5:1 contrast, so keep text on orange dark.
+- Structure: header with wordmark, Singapore coordinates and uppercase nav (full-screen menu on phones); numbered sections with `(01)` labels and vertical side labels; pill buttons with a four-point star; project cards with overlaid title, arrow and category tags, plus a Grid/List toggle; dark sections with staggered cards; capsule film images; a footer with two marquee rows ("Mingkey", "Make it unexpected") and a spinning "Let's talk" badge.
+- Homepage order: full-bleed Companion hero ("MINGKEY / CG ARTIST", "What I do" list) → (01) About → (02) Sketch / Sculpt / Animate → scroll-expanding WTFO film stage → (03) Disciplines → (04) Selected work → (05) Behind the work (350Z wireframe slider + step cards) → (06) Films → footer.
+- Brave sections that make claims (team, awards, on-time delivery, client support) were replaced with truthful equivalents; keep it that way.
 
-Maintain the identity as Mingjie's independent creative practice; do not invent a team, agency clients or credentials. Use the actual portfolio artwork.
+Maintain the identity as Mingjie's independent creative practice; do not invent a team, agency clients or credentials. Use the actual portfolio artwork. The user rejected AI-generated hero art; do not add generated imagery.
 
-Motion uses native scrolling, requestAnimationFrame and IntersectionObserver with no animation dependency or scroll interception. Headline entry, artwork expansion/parallax, graphic rotation, text-band movement, project reveals and a reading-progress line are implemented. Effects are reduced on mobile. OS reduced-motion and the footer motion toggle disable animation and sticky staging; content stays visible with JavaScript disabled. Keep keyboard focus revealing its containing section. Filters explicitly reveal matching cards.
+Motion uses native scrolling, requestAnimationFrame, IntersectionObserver and CSS keyframes, with no animation dependency or scroll interception: title entry, hero parallax, drifting process words, the film stage expanding on scroll, reveals, marquees, the spinning badge and a progress line. OS reduced motion and the footer motion toggle (remembered in localStorage) stop all of it, including marquees; content stays visible with JavaScript disabled. Keyboard focus reveals its containing element. Filters explicitly reveal matching cards.
 
 ## Current implementation
 
-Plain static HTML/CSS/JS on GitHub Pages (root of `main`). No framework, runtime dependency, server backend or secrets. A zero-dependency Node script generates the static pages from one data file; its output is committed, so hosting needs no build step.
+Plain static HTML/CSS/JS on GitHub Pages (root of `main`). No framework, runtime dependency, server backend or secrets. A zero-dependency Node script generates every page from one data file; its output is committed, so hosting needs no build step.
 
-- `data/projects.mjs` is the single source of truth for all 14 projects: copy, categories, images, videos, credits, homepage `featured` flag. The first category is the one used by the homepage filter.
-- `node tools/build.mjs` writes `work/index.html`, `work/<slug>/index.html`, `about/`, `contact/`, `404.html`, `sitemap.xml`, and replaces the homepage grid between `<!-- build:featured -->` markers. It also rewrites the `?v=` cache-busting query on the homepage; bump `VERSION` when CSS/JS change. About/Contact copy lives in the build script's templates.
-- Never hand-edit generated files; edit the data or templates and rebuild.
-- `script.js` is shared by every page and guards each feature by element presence: mobile menu, filters (multi-category cards; the work index syncs the filter to the URL hash), comparison slider, lightbox (native `<dialog>`, built in JS; without JS the gallery links open the image), copy email, scroll motion and the motion toggle (remembered in localStorage, wrapped in try/catch).
-- Images: `assets/<name>.webp` (≤1800px) and `assets/thumbs/<name>.webp` (≤960×1200), both made by `tools/optimize-images.py`. The build reads WebP dimensions itself. `assets/sources.json` maps every file to its original. Images under 700px wide render at native size in galleries.
+- `data/projects.mjs` is the single source of truth for all 14 projects (copy, categories, images, videos, credits, `featured` flag) plus `site` details (email, location, coordinates). `indexCard` overrides `card` for the image on project cards.
+- `node tools/build.mjs` writes every page: `index.html`, `work/`, `work/<slug>/`, `about/`, `contact/`, `404.html` and `sitemap.xml`. Homepage, About and Contact copy lives in its templates. Bump `VERSION` there when CSS/JS change. Never hand-edit generated HTML.
+- `script.js` is shared by every page and guards each feature by element presence: phone menu, filters (multi-category, work index synced to the URL hash), Grid/List toggle (remembered), comparison slider, lightbox (native `<dialog>`; without JS gallery links open the image), copy email, the compose form, scroll motion and the motion toggle. localStorage access is wrapped in try/catch.
+- The Contact page's compose form builds a `mailto:` link and opens the visitor's email app; the page says nothing is sent from it. There is no email service; never show a fake "sent" message.
+- Images: `assets/<name>.webp` (≤1800px), `assets/thumbs/<name>.webp` (≤960×1200) and, for the two full-bleed heroes, `assets/wide/<name>.webp` (2400px). The build puts every available size into `srcset` and reads WebP dimensions itself. `assets/sources.json` maps every file to its original. Images under 700px wide render at native size in galleries.
 - Paths are relative; nested pages use `../` or `../../`. `404.html` alone uses absolute `/mingkey-homepage/` paths because Pages serves it at any depth.
 - Every page has a canonical URL, Open Graph/Twitter tags and a sitemap entry; `robots.txt` points to the sitemap. Social images are WebP.
-- Videos open on YouTube/Vimeo in a new tab. There are no embedded players (an embed rendered blank in earlier testing); preview images are the videos' own thumbnails.
-- The homepage project dialog was removed; homepage cards now link to case studies.
+- Videos open on YouTube/Vimeo in a new tab. There are no embedded players; preview images are the videos' own thumbnails.
 
 ## Source pages and verified facts
 

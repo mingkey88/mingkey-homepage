@@ -18,12 +18,12 @@ Open http://localhost:4173. Any static server works.
 
 | Path | What it is | Edit by hand? |
 | --- | --- | --- |
-| `index.html` | Homepage | Yes, except the project grid between the `build:featured` markers |
-| `data/projects.mjs` | Every project: titles, copy, categories, images, videos, credits | Yes, this is where project content lives |
-| `tools/build.mjs` | Generates the pages below from the data (Node 18+, no dependencies) | Only to change page templates, About or Contact copy |
-| `work/`, `about/`, `contact/`, `404.html`, `sitemap.xml` | Generated output, committed so GitHub Pages can serve it | No, they are overwritten by the build |
+| `data/projects.mjs` | Every project (titles, copy, categories, images, videos, credits) and site details | Yes, this is where project content lives |
+| `tools/build.mjs` | Generates every page from the data (Node 18+, no dependencies) | To change page templates or homepage, About and Contact copy |
+| `index.html`, `work/`, `about/`, `contact/`, `404.html`, `sitemap.xml` | Generated output, committed so GitHub Pages can serve it | No, they are overwritten by the build |
 | `styles.css`, `script.js` | Shared by every page | Yes |
-| `assets/*.webp`, `assets/thumbs/*.webp` | Full-size (≤1800px) and grid-size (≤960px) artwork | Created with `tools/optimize-images.py` |
+| `assets/*.webp`, `assets/thumbs/*.webp`, `assets/wide/*.webp` | Full-size (≤1800px), grid-size (≤960px) and hero-size (2400px) artwork | Created with `tools/optimize-images.py` |
+| `assets/fonts/` | Overused Grotesk, self-hosted, with its SIL Open Font License | No |
 | `assets/sources.json` | Original URL for every image | Yes, when adding images |
 
 ### Change project text or add a project
@@ -41,6 +41,6 @@ GitHub Pages serves the root of `main`. Commit and push to update the site. Page
 
 ## Content and design
 
-The creative-agency direction (oversized editorial type, an earthy cream/espresso/burnt-orange palette, scroll-driven artwork stage, reveals and moving text band) was requested on 23 September 2026 and supersedes the original Wix template reference. Motion follows native scrolling, respects the OS reduced-motion setting, and can be switched off with the footer toggle (remembered across pages).
+The layout follows the language of the Studio Brave Webflow template (https://studio-brave.webflow.io/), requested on 23 September 2026 and rebuilt in original code with an earthy cream/espresso/burnt-orange palette. No code, images, copy or font files were taken from the template. Motion follows native scrolling, respects the OS reduced-motion setting, and can be switched off with the footer toggle (remembered across pages).
 
-Artwork belongs to its respective rights holders. No blanket open-source licence is granted for the portfolio images. The Transformers fan art is unofficial; Transformers is a trademark of Hasbro.
+Artwork belongs to its respective rights holders. No blanket open-source licence is granted for the portfolio images. Overused Grotesk is by Bao Nguyen / RandomMaerks and used under the SIL Open Font License 1.1 (`assets/fonts/OFL.txt`). The Transformers fan art is unofficial; Transformers is a trademark of Hasbro.
