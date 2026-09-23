@@ -42,9 +42,11 @@ export const projects = [
     gallery: [
       { items: [
         { image: 'ararush', alt: 'Ararush in 3D: a stone creature with glowing lava cracks, holding a molten sphere', caption: 'Ararush in 3D' },
-        { image: 'ararush-painting', alt: 'Digital painting of Ararush, a lava creature striding through a fiery rocky landscape', caption: 'Ararush, digital painting' },
+        { image: 'ararush-painting', alt: 'Digital painting of Ararush, a lava creature striding through a fiery rocky landscape', caption: 'Ararush, original digital painting' },
+        { image: 'ararush-painting-ai', alt: 'A lava-cracked stone creature roaring over a fiery rocky landscape', caption: 'Ararush painting, AI-regenerated' },
       ] },
     ],
+    notice: 'One of the paintings is an AI-regenerated version of my original, shown next to it.',
     related: ['saikokira'],
   },
   {
@@ -57,11 +59,15 @@ export const projects = [
     intro: [
       'A digital painting exploring the bond between a warrior and a fantastical companion, with warm light, armour and a shared silhouette.',
     ],
-    card: { image: 'companion', alt: 'Companion, a fantasy warrior and dragon illustration' },
-    hero: 'companion',
+    notice: 'The main image is an AI-regenerated version of my original painting, which is shown further down the page.',
+    card: { image: 'companion-ai', alt: 'Companion: a dark knight beside a snarling black dragon in amber shadow' },
+    hero: 'companion-ai',
     gallery: [
       { items: [
-        { image: 'companion', alt: 'An armoured dragon alongside a warrior in a red cape, painted in warm amber tones', caption: 'Companion' },
+        { image: 'companion-ai', alt: 'A dark knight in black armour beside a snarling black dragon, in deep amber shadow', caption: 'Companion, AI-regenerated' },
+      ] },
+      { heading: 'The original', items: [
+        { image: 'companion', alt: 'An armoured dragon alongside a warrior in a red cape, painted in warm amber tones', caption: 'Original digital painting' },
       ] },
     ],
   },
@@ -102,11 +108,15 @@ export const projects = [
     intro: [
       'A character illustration with an unsettling edge. An exploration of expression, atmosphere and visual storytelling.',
     ],
-    card: { image: 'sunny', alt: 'Sinister Sunny, a girl in a red dress holding a small doll', fit: 'contain', tone: 'night' },
-    hero: 'sunny',
+    notice: 'The main image is an AI-regenerated version of my original painting, which is shown further down the page.',
+    card: { image: 'sunny-ai', alt: 'Sinister Sunny, a girl in a red dress holding a small toy and a knife', fit: 'contain', tone: 'night' },
+    hero: 'sunny-ai',
     gallery: [
       { items: [
-        { image: 'sunny', alt: 'A barefoot girl in a red dress holding a small doll, lit from behind in a dark room', caption: 'Sinister Sunny' },
+        { image: 'sunny-ai', alt: 'A barefoot girl with short auburn hair in a red dress, clutching a small toy and a knife, lit from behind in a dark room', caption: 'Sinister Sunny, AI-regenerated' },
+      ] },
+      { heading: 'The original', items: [
+        { image: 'sunny', alt: 'A barefoot girl in a red dress holding a small doll, lit from behind in a dark room', caption: 'Original character illustration' },
       ] },
     ],
   },
@@ -224,11 +234,15 @@ export const projects = [
     intro: [
       'A Spartan warrior explored twice: as a painted character illustration with spear and shield, and as a 3D model.',
     ],
-    card: { image: 'spartan-painting', alt: 'Painting of a Spartan warrior with a crested helmet, spear and round shield', position: 'center 20%' },
-    hero: 'spartan-painting',
+    notice: 'The main image is an AI-regenerated version of my original painting, which is shown further down the page with the 3D model.',
+    card: { image: 'spartan-ai', alt: 'A Spartan warrior with a crested helmet, spear and round red shield', position: 'center 25%' },
+    hero: 'spartan-ai',
     gallery: [
       { items: [
-        { image: 'spartan-painting', alt: 'Painting of a Spartan warrior with a crested helmet, spear and shield, in a dusty golden haze', caption: 'Spartan, digital painting' },
+        { image: 'spartan-ai', alt: 'A Spartan warrior in a crested helmet and red cloak, holding a spear and a round red shield, in a misty haze', caption: 'Spartan, AI-regenerated' },
+      ] },
+      { heading: 'The originals', items: [
+        { image: 'spartan-painting', alt: 'Painting of a Spartan warrior with a crested helmet, spear and shield, in a dusty golden haze', caption: 'Original digital painting' },
         { image: 'spartan', alt: '3D model of a Spartan warrior in a red cape and crested helmet', caption: 'Spartan in 3D' },
       ] },
     ],
@@ -243,11 +257,15 @@ export const projects = [
     intro: [
       'A character illustration of Kate, a vampire hunter in a wide-brimmed hat, red coat and tall boots.',
     ],
-    card: { image: 'kate', alt: 'Vampire Hunter Kate, a woman in a wide-brimmed hat and red coat', position: 'center 12%' },
-    hero: 'kate',
+    notice: 'The main image is an AI-regenerated version of my original painting, which is shown further down the page.',
+    card: { image: 'kate-ai', alt: 'Vampire Hunter Kate, a smiling woman in a wide-brimmed hat and red coat', position: 'center 20%' },
+    hero: 'kate-ai',
     gallery: [
       { items: [
-        { image: 'kate', alt: 'A vampire hunter with long dark hair, a wide-brimmed hat, red coat and tall boots, hands on her belt', caption: 'Vampire Hunter Kate' },
+        { image: 'kate-ai', alt: 'A smiling woman in a wide-brimmed hat, red coat, corset and tall boots, hands on her hips', caption: 'Vampire Hunter Kate, AI-regenerated' },
+      ] },
+      { heading: 'The original', items: [
+        { image: 'kate', alt: 'A vampire hunter with long dark hair, a wide-brimmed hat, red coat and tall boots, hands on her belt', caption: 'Original character illustration' },
       ] },
     ],
   },
@@ -260,11 +278,15 @@ export const projects = [
     intro: [
       'An armoured gorilla warrior with a great axe, painted against a burning orange sky.',
     ],
-    card: { image: 'king-kong', alt: 'King Kong, an armoured gorilla warrior holding an axe' },
-    hero: 'king-kong',
+    notice: 'The main image is an AI-regenerated version of my original painting, which is shown further down the page.',
+    card: { image: 'king-kong-ai', alt: 'King Kong, a crowned gorilla warrior in gold armour holding an axe' },
+    hero: 'king-kong-ai',
     gallery: [
       { items: [
-        { image: 'king-kong', alt: 'A gorilla in gold and black armour holding a long axe, against an orange sky', caption: 'King Kong' },
+        { image: 'king-kong-ai', alt: 'A crowned gorilla warrior in gold and black armour holding a great axe against an orange background', caption: 'King Kong, AI-regenerated' },
+      ] },
+      { heading: 'The original', items: [
+        { image: 'king-kong', alt: 'A gorilla in gold and black armour holding a long axe, against an orange sky', caption: 'Original digital painting' },
       ] },
     ],
   },
@@ -278,12 +300,15 @@ export const projects = [
     intro: [
       'A personal fan painting of Optimus Prime, inspired by Transformers: Dark of the Moon.',
     ],
-    notice: 'Transformers and Optimus Prime are trademarks of Hasbro. This is unofficial fan art.',
-    card: { image: 'transformers', alt: 'Fan painting of Optimus Prime wielding a glowing blade' },
-    hero: 'transformers',
+    notice: ['The main image is an AI-regenerated version of my original painting, which is shown further down the page.', 'Transformers and Optimus Prime are trademarks of Hasbro. This is unofficial fan art.'],
+    card: { image: 'transformers-ai', alt: 'Fan art of Optimus Prime striding through smoke with a glowing blade' },
+    hero: 'transformers-ai',
     gallery: [
       { items: [
-        { image: 'transformers', alt: 'Optimus Prime in red and blue armour, raising a fiery blade', caption: 'Transformers fan art' },
+        { image: 'transformers-ai', alt: 'Optimus Prime striding through smoke and debris with a glowing blade, another robot and an explosion behind him', caption: 'Transformers fan art, AI-regenerated' },
+      ] },
+      { heading: 'The original', items: [
+        { image: 'transformers', alt: 'Optimus Prime in red and blue armour, raising a fiery blade', caption: 'Original fan painting' },
       ] },
     ],
   },

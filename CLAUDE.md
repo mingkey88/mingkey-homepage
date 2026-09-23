@@ -20,7 +20,9 @@ Maintain the identity as Mingjie's independent creative practice; do not invent 
 
 Tried and rejected on 23 September 2026 — do not reintroduce without the user asking:
 - A layout modelled on the Studio Brave Webflow template (Overused Grotesk, full-bleed hero, numbered sections, marquee footer). It was published, then reverted at the user's request (revert of commit e397182); the user prefers this layout. The earthy palette stays.
-- AI-generated hero artwork (Higgsfield drafts). The user will edit individual artworks himself; do not add generated imagery.
+- AI-generated hero artwork made in this session (Higgsfield drafts). Do not generate imagery for the site.
+
+AI-regenerated artwork supplied by the user (23 September 2026): the user regenerated some of his old paintings with AI (https://github.com/mingkey88/Projects/tree/main/AI_Artworks). These now lead Companion (also the homepage stage and Contact image), Sinister Sunny, Vampire Hunter Kate, King Kong, Transformers fan art and Spartan (`<name>-ai.webp`), and an extra AI painting sits beside the original in Ararush. Each page keeps the original under "The original" and a small note saying the main image is AI-regenerated; keep that disclosure so the hand-made originals and the remakes are never confused. The folder's hydra and fat-man images are different takes, not remakes, and its other 11 images are not on the site; ask before using them.
 
 Motion uses native scrolling, requestAnimationFrame and IntersectionObserver with no animation dependency or scroll interception. Headline entry, artwork expansion/parallax, graphic rotation, text-band movement, project reveals and a reading-progress line are implemented. Effects are reduced on mobile. OS reduced-motion and the footer motion toggle disable animation and sticky staging; content stays visible with JavaScript disabled. Keep keyboard focus revealing its containing section. Filters explicitly reveal matching cards.
 

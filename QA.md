@@ -1,5 +1,12 @@
 # Site checks
 
+## AI-regenerated artwork — 23 September 2026
+
+- Seven user-supplied AI remakes added (Companion, Sinister Sunny, Vampire Hunter Kate, King Kong, Transformers fan art, Spartan, plus an extra Ararush painting). Each case study's lightbox opens on the AI version, then the original, with the disclosure note shown.
+- Existing browser checks pass (the old single-image lightbox check no longer applies: every image project now has at least two images). No horizontal scroll at 320–1024px; 122 local links and images return 200.
+- Homepage stage (desktop and phone), homepage grid and two case studies visually reviewed.
+
+
 ## Full site build — 23 September 2026
 
 Checked locally in headless Chromium against `python3 -m http.server`, including a copy served under `/mingkey-homepage/` to match GitHub Pages.

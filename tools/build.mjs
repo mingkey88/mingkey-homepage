@@ -237,7 +237,7 @@ function projectPage(project, index) {
       <div class="hero-topline"><span class="eyebrow"><span class="small-dot"></span> PROJECT ${pad(index + 1)} / ${pad(total)}</span><span class="eyebrow">${esc(project.label.toUpperCase())}</span></div>
       <h1 class="page-title" id="page-title">${displayTitle(project)}</h1>
       <div class="project-intro">
-        <div class="project-lede">${project.intro.map(text => `<p>${esc(text)}</p>`).join('')}${project.notice ? `<p class="small-print">${esc(project.notice)}</p>` : ''}</div>
+        <div class="project-lede">${project.intro.map(text => `<p>${esc(text)}</p>`).join('')}${[].concat(project.notice || []).map(text => `<p class="small-print">${esc(text)}</p>`).join('')}</div>
         <dl class="project-facts">${facts.map(fact => `<div><dt>${fact.term}</dt><dd>${fact.detail}</dd></div>`).join('')}</dl>
       </div>
     </section>
@@ -311,7 +311,7 @@ function contactPage() {
       </div>
     </section>
     <section class="contact-art" aria-label="From the archive">
-      <a href="${p}work/companion/">${img('companion', 'Companion: an armoured dragon alongside a warrior, painted in warm amber tones', p, { sizes: '100vw' })}<span class="stage-caption"><span>FROM THE ARCHIVE / COMPANION</span><span>SEE THE PROJECT ↗</span></span></a>
+      <a href="${p}work/companion/">${img('companion-ai', 'Companion: a dark knight beside a snarling black dragon in amber shadow', p, { sizes: '100vw' })}<span class="stage-caption"><span>FROM THE ARCHIVE / COMPANION, AI-REGENERATED</span><span>SEE THE PROJECT ↗</span></span></a>
     </section>`,
   });
 }
