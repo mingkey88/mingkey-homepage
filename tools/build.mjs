@@ -14,7 +14,7 @@ import { site, categories, projects } from '../data/projects.mjs';
 
 const ROOT = join(dirname(fileURLToPath(import.meta.url)), '..');
 // Bump when styles.css or script.js change so browsers skip stale caches.
-const VERSION = 'site-3';
+const VERSION = 'site-4';
 const BASE_PATH = new URL(site.url).pathname; // "/mingkey-homepage/"
 const mailto = `mailto:${site.email}`;
 
@@ -65,7 +65,7 @@ function head({ title, description, path, image, p, type = 'website', noindex = 
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
-  <meta name="theme-color" content="#eeeee6">
+  <meta name="theme-color" content="#f1ebe1">
   <title>${esc(title)}</title>
   <meta name="description" content="${esc(description)}">${noindex ? '\n  <meta name="robots" content="noindex">' : `\n  <link rel="canonical" href="${url}">`}
   <meta property="og:site_name" content="${site.name}">

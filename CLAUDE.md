@@ -14,7 +14,7 @@ User's other site, for quality reference: https://mingkey88.github.io/superiso-h
 
 The user subsequently asked for a creative-agency feel with scroll animations and authorized continuing with it. This supersedes the original split-screen template direction.
 
-Use oversized uppercase editorial typography, italic serif contrasts, off-white `#eeeee6`, dark green-black `#1d211d`, and acid lime `#d3fb50`. The hero reads “MAKE IT UNEXPECTED.” A featured Companion artwork scene expands on scroll, followed by a dark introduction, a lime moving text band, a staggered project grid, process and film sections, and a lime contact section.
+Use oversized uppercase editorial typography and italic serif contrasts. Palette (earthy, since 23 September 2026, replacing the original lime): cream `--paper #f1ebe1`, espresso `--ink #2a1e16`, burnt orange `--accent #e0703a`, deeper orange `--accent-deep #a8441a` for small accents on cream, sand `--panel #e7ddcd`. All colours are CSS variables in `:root` in `styles.css`; ink on the accent is about 5:1 contrast, so keep text on orange dark. The hero reads “MAKE IT UNEXPECTED.” A featured Companion artwork scene expands on scroll, followed by a dark introduction, an orange moving text band, a staggered project grid, process and film sections, and an orange contact section.
 
 Maintain the identity as Mingjie's independent creative practice; do not invent a team, agency clients or credentials. Use the actual portfolio artwork.
 

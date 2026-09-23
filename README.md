@@ -41,6 +41,6 @@ GitHub Pages serves the root of `main`. Commit and push to update the site. Page
 
 ## Content and design
 
-The creative-agency direction (oversized editorial type, acid lime, scroll-driven artwork stage, reveals and moving text band) was requested on 23 September 2026 and supersedes the original Wix template reference. Motion follows native scrolling, respects the OS reduced-motion setting, and can be switched off with the footer toggle (remembered across pages).
+The creative-agency direction (oversized editorial type, an earthy cream/espresso/burnt-orange palette, scroll-driven artwork stage, reveals and moving text band) was requested on 23 September 2026 and supersedes the original Wix template reference. Motion follows native scrolling, respects the OS reduced-motion setting, and can be switched off with the footer toggle (remembered across pages).
 
 Artwork belongs to its respective rights holders. No blanket open-source licence is granted for the portfolio images. The Transformers fan art is unofficial; Transformers is a trademark of Hasbro.
