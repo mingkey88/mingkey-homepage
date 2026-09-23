@@ -307,24 +307,25 @@ export const projects = [
     ],
   },
   {
-    slug: 'print-and-digital-ads',
-    title: 'Print & Digital Ads',
-    display: ['Print &', 'digital ads'],
+    slug: 'poster-trial',
+    title: 'Poster Trial',
+    display: ['Poster', 'trial'],
     categories: ['design'],
-    label: 'Graphic design',
-    summary: 'Newspaper advertisements, a web banner set and tablet app screens promoting a video app.',
+    label: 'Graphic design / Trial project',
+    summary: 'A trial run at poster making, with web banners and tablet app screens for a video app.',
     intro: [
-      'Newspaper advertisements, web banners and tablet app screens promoting the SPH Razor video app, from the graphic design section of my original portfolio.',
+      'A trial run at making posters, built around the SPH Razor video app. The set also includes web banners and tablet app screens.',
     ],
-    card: { image: 'ad-download', alt: 'Newspaper ad headed “Download the new SPH Razor app”, with phones and a QR code', position: 'center 30%' },
+    notice: 'A poster-making trial rather than client work. SPH Razor branding belongs to its owner.',
+    card: { image: 'ad-download', alt: 'Poster headed “Download the new SPH Razor app”, with phones and a QR code', position: 'center 30%' },
     hero: 'banner-set',
     gallery: [
       {
-        heading: 'Newspaper advertisements',
+        heading: 'Posters',
         items: [
-          { image: 'ad-scan', alt: 'Newspaper ad: a silhouetted face looking at a phone displaying a QR code, with the SPH Razor logo', caption: 'Scan to watch' },
-          { image: 'ad-phones', alt: 'Newspaper ad: two smartphones showing the SPH Razor app above a QR code', caption: 'On every screen' },
-          { image: 'ad-download', alt: 'Newspaper ad headed “Download the new SPH Razor app”, with phones, a QR code and app store badges', caption: 'Download the app' },
+          { image: 'ad-scan', alt: 'Poster: a silhouetted face looking at a phone displaying a QR code, with the SPH Razor logo', caption: 'Scan to watch' },
+          { image: 'ad-phones', alt: 'Poster: two smartphones showing the SPH Razor app above a QR code', caption: 'On every screen' },
+          { image: 'ad-download', alt: 'Poster headed “Download the new SPH Razor app”, with phones, a QR code and app store badges', caption: 'Download the app' },
         ],
       },
       {

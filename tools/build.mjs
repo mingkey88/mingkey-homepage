@@ -255,7 +255,7 @@ function aboutPage() {
     ['Illustration', 'Digital paintings with warm light, strong silhouettes and a little menace.', 'work/#illustration'],
     ['3D modelling & sculpture', 'Characters, creatures and cars built in 3D, and a dragon sculpted in clay.', 'work/#3d'],
     ['Motion', 'A solo animated short, and effects animation for a film made with friends.', 'work/#motion'],
-    ['Graphic design', 'Newspaper ads, web banners and app screens.', 'work/#design'],
+    ['Graphic design', 'A poster trial, web banners and app screens.', 'work/#design'],
   ];
   const tools = ['Adobe Photoshop', 'Adobe After Effects', 'Adobe Premiere', 'Autodesk 3ds Max', 'Autodesk Mudbox', 'Sculpey clay'];
   return page({
@@ -263,15 +263,16 @@ function aboutPage() {
     current: 'about',
     path: 'about/',
     title: 'About Mingjie Tan — Mingkey',
-    description: 'Mingjie Tan is a CG artist from Singapore working across character design, illustration, 3D modelling, motion graphics and graphic design.',
+    description: 'Mingjie Tan is a CG artist from Singapore working across character design, illustration, 3D modelling, motion graphics and graphic design, and a digital marketing executive and web developer at achates360.',
     image: 'alien-mechanic',
     main: p => `    <section class="page-hero" aria-labelledby="page-title">
       <div class="hero-topline"><span class="eyebrow"><span class="small-dot"></span> ABOUT / MINGJIE TAN</span><span class="eyebrow">BASED IN SINGAPORE<br>THINKING BEYOND IT.</span></div>
       <h1 class="page-title" id="page-title"><span class="hero-line"><span>Hi, I’m</span></span><span class="hero-line"><span><em>Mingjie<span class="title-period">.</span></em></span></span></h1>
+      <p class="page-lede">CG artist from Singapore. Currently a digital marketing executive and web developer at achates360.</p>
     </section>
     <section class="intro about-intro section-pad" aria-labelledby="about-title">
       <div class="section-label"><span class="small-dot"></span> THE SHORT VERSION</div>
-      <div class="intro-main"><h2 id="about-title">A CG artist<br><em>from Singapore.</em></h2><div class="intro-bottom"><p>I’m Mingjie, and I make characters, creatures and the worlds they live in. My work runs across character design, illustration, 3D modelling, motion graphics and graphic design, often all on the same project. Thank you for visiting. If you’d like to work together, drop me an email.</p><a class="text-link" href="${p}contact/">Get in touch <span aria-hidden="true">↗</span></a></div></div>
+      <div class="intro-main"><h2 id="about-title">A CG artist<br><em>from Singapore.</em></h2><div class="intro-bottom"><p>I’m Mingjie, and I make characters, creatures and the worlds they live in. My work runs across character design, illustration, 3D modelling, motion graphics and graphic design, often all on the same project. These days I’m also a digital marketing executive and web developer at achates360. Thank you for visiting. If you’d like to work together, drop me an email.</p><a class="text-link" href="${p}contact/">Get in touch <span aria-hidden="true">↗</span></a></div></div>
     </section>
     <section class="about-feature section-pad" aria-labelledby="feature-title">
       <a class="about-art" href="${p}work/what-the-flying-object/">${img('alien-mechanic', 'Painted character art of the alien mechanic from What the Flying Object', p, { sizes: '(max-width: 700px) 100vw, 40vw' })}</a>

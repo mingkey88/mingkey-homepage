@@ -38,7 +38,7 @@ Plain static HTML/CSS/JS on GitHub Pages (root of `main`). No framework, runtime
 
 The Wix site has nine pages: Home, About, 3D works (`/3dworks`), Sculpt (`/sculpt`), Character (`/characters`), Hard Surface (`/vehicles`), Illustrations, Projects and Contact. All gallery items and videos across them were migrated on 23 September 2026 (the 3D gallery's 14 items, 8 digital paintings, 7 graphic-design pieces, the 9-image WTFO gallery). Duplicates across pages were merged. The only images not published are the 2015 profile photo on the About page and the resume PDF.
 
-Mingjie Tan is a CG artist from Singapore. The old bio lists character design, illustrations, 3D modelling, motion graphics and graphic design. It lists Adobe Photoshop, After Effects, Premiere, Autodesk 3ds Max and Mudbox; the About page shows these as "tools across the archive", not as current proficiency. Do not invent clients, awards, dates, outcomes, availability, job titles or years of experience.
+Mingjie Tan is a CG artist from Singapore. Confirmed by the user on 23 September 2026: his current role is digital marketing executive and web developer at achates360 (mentioned on the About page). The old bio lists character design, illustrations, 3D modelling, motion graphics and graphic design. It lists Adobe Photoshop, After Effects, Premiere, Autodesk 3ds Max and Mudbox; the About page shows these as "tools across the archive", not as current proficiency. Do not invent clients, awards, dates, outcomes, availability, job titles or years of experience.
 
 Verified project text from the source pages (already in the data file):
 - Alien Mechanic: main character of WTFO; modelled in 3ds Max, textured in Photoshop. Video: https://www.youtube.com/watch?v=BSt10vJLwTQ
@@ -46,25 +46,23 @@ Verified project text from the source pages (already in the data file):
 - Dohva dragon: traditional Sculpey clay sculpt, baked; half in full detail, half showing anatomy. Video: https://www.youtube.com/watch?v=grxExYOStyw
 - Swamp Hydra: digital sculpt, textured in Mudbox. Video: https://www.youtube.com/watch?v=Df1Sz7spdX0 (YouTube title "Swamp Hydralisk Video")
 - Spartan, FatMan Project, Kate, King Kong, Transformers fan art, the ads: no source description; copy only describes what is visible.
-- Graphic design pieces show SPH Razor branding. The copy says they "promote" the app; it does not claim a client relationship. Confirm with the user before stating one.
+- Poster Trial (`work/poster-trial/`): the SPH Razor-branded posters, banners and app screens were a poster-making trial, not client work (confirmed by the user). Keep the notice saying so.
 
-The old contact page has an apparent typo (`gmil.com`). The site uses `mingjie.tan88@gmail.com`. Ask the user if they want a different public address. The phone number and resume were deliberately not republished.
+The old contact page has an apparent typo (`gmil.com`). The site uses `mingjie.tan88@gmail.com`, confirmed by the user as the public contact address. The phone number and resume were deliberately not republished.
 
 ### Films
 
 **What the Flying Object / WTFO** — https://www.youtube.com/watch?v=ilIMWmxm-Jc. Solo short about an alien mechanic trying to operate his UFO's tractor beam; Mingjie handled concept through modelling, rigging and effects.
 
-**Saikokira — Pachinko vs Ararush** — https://vimeo.com/84110618, on Samuel Kambey's Vimeo channel. The Wix page spelled it "Sakokira"; the site uses the Vimeo title. Group 2D short: Mingjie was the effects artist and animated effects plus some character shots. Team as listed on the portfolio: Samuel Kambey, Wilson Halim, Bobbie Teo, Weatherly Tan, Chris Ong and Mingjie. The Vimeo description lists "Ong Teng Wee" and "Teo Wan Ting" where the portfolio lists Chris Ong and Bobbie Teo; the site keeps the portfolio names. Software per Vimeo: Digicel FlipBook, Toon Boom, Photoshop, After Effects, Premiere Pro (the film as a whole, not necessarily Mingjie). Preserve collaboration credits; never imply solo authorship.
+**Saikokira — Pachinko vs Ararush** — https://vimeo.com/84110618, on Samuel Kambey's Vimeo channel. The Wix page spelled it "Sakokira"; the user confirmed the site should follow the film's own title, "Saikokira". Group 2D short: Mingjie was the effects artist and animated effects plus some character shots. Team as listed on the portfolio: Samuel Kambey, Wilson Halim, Bobbie Teo, Weatherly Tan, Chris Ong and Mingjie. The Vimeo description lists "Ong Teng Wee" and "Teo Wan Ting" where the portfolio lists Chris Ong and Bobbie Teo; the site keeps the portfolio names. Software per Vimeo: Digicel FlipBook, Toon Boom, Photoshop, After Effects, Premiere Pro (the film as a whole, not necessarily Mingjie). Preserve collaboration credits; never imply solo authorship.
 
 Exclude the default Wix social links (Wix/Flickr).
 
 ## Open questions for the user
 
-1. Should the About page mention the user's current direction (web and game development) or current role? Nothing beyond the verified 2015 bio is published.
-2. Use the 2015 profile photo on About, or supply a newer one?
-3. Confirm the "Sakokira"/"Saikokira" spelling and whether the SPH Razor ads can be described as client work.
-4. Keep `mingjie.tan88@gmail.com` as the public contact address?
-5. Social previews use WebP. If a platform needs JPEG, generate 1200×630 JPEGs and point `og:image` at them.
+1. The 2015 profile photo from the old About page is not published. Ask before adding it or a newer photo.
+2. Social previews use WebP. If a platform needs JPEG, generate 1200×630 JPEGs and point `og:image` at them.
+3. The repository is still named `mingkey-homepage`. Renaming it changes the GitHub Pages URL; if that happens, update `site.url` in `data/projects.mjs`, the homepage's absolute URLs and `robots.txt`, then rebuild.
 
 ## Useful commands
 
