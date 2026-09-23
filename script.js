@@ -1,31 +1,27 @@
 // Shared by every page. Each feature only runs when its markup is present.
 
-const storage = {
-  get(key) { try { return localStorage.getItem(key); } catch { return null; } },
-  set(key, value) { try { localStorage.setItem(key, value); } catch { /* storage unavailable */ } },
-};
-
-// Mobile navigation: a full-screen menu on small screens.
-const siteHeader = document.querySelector('.site-header');
+// Mobile navigation
 const menuToggle = document.querySelector('.menu-toggle');
 const navigation = document.querySelector('#navigation');
-function setMenu(open) {
-  navigation.classList.toggle('open', open);
-  siteHeader.classList.toggle('menu-open', open);
-  document.body.classList.toggle('menu-open', open);
-  menuToggle.setAttribute('aria-expanded', String(open));
+function closeMenu() {
+  navigation.classList.remove('open');
+  menuToggle.setAttribute('aria-expanded', 'false');
+  menuToggle.querySelector('span').textContent = '+';
 }
-menuToggle.addEventListener('click', () => setMenu(!navigation.classList.contains('open')));
-navigation.querySelectorAll('a').forEach(a => a.addEventListener('click', () => setMenu(false)));
-document.addEventListener('keydown', event => {
-  if (event.key === 'Escape' && navigation.classList.contains('open')) { setMenu(false); menuToggle.focus(); }
+menuToggle.addEventListener('click', () => {
+  const isOpen = navigation.classList.toggle('open');
+  menuToggle.setAttribute('aria-expanded', String(isOpen));
+  menuToggle.querySelector('span').textContent = isOpen ? '−' : '+';
 });
-window.matchMedia('(min-width: 761px)').addEventListener('change', event => { if (event.matches) setMenu(false); });
+navigation.querySelectorAll('a').forEach(a => a.addEventListener('click', closeMenu));
+document.addEventListener('keydown', event => {
+  if (event.key === 'Escape' && navigation.classList.contains('open')) { closeMenu(); menuToggle.focus(); }
+});
 
-// Category filters (work index). Cards can belong to several categories.
+// Category filters. Cards can belong to several categories.
 const filterGroup = document.querySelector('.filters');
 const filterButtons = document.querySelectorAll('[data-filter]');
-const projectCards = document.querySelectorAll('.cards .card');
+const projectCards = document.querySelectorAll('.project-grid .project-card');
 function applyFilter(category) {
   let count = 0;
   filterButtons.forEach(b => { b.classList.toggle('active', b.dataset.filter === category); b.setAttribute('aria-pressed', String(b.dataset.filter === category)); });
@@ -33,6 +29,7 @@ function applyFilter(category) {
     card.hidden = category !== 'all' && !card.dataset.category.split(' ').includes(category);
     if (!card.hidden) { count++; card.classList.add('is-visible'); }
   });
+  document.querySelector('.project-grid').classList.toggle('filtered', category !== 'all');
   document.querySelector('#filter-status').textContent = `Showing ${count} ${count === 1 ? 'project' : 'projects'}.`;
 }
 const filterFromHash = () => {
@@ -50,21 +47,6 @@ if (filterGroup?.hasAttribute('data-sync-hash')) {
   if (filterFromHash() !== 'all') applyFilter(filterFromHash());
   window.addEventListener('hashchange', () => applyFilter(filterFromHash()));
 }
-
-// Grid / list layout for project cards, remembered between pages.
-document.querySelectorAll('.view-toggle').forEach(toggle => {
-  const cards = toggle.closest('section').querySelector('.cards');
-  const setView = view => {
-    cards.classList.toggle('is-list', view === 'list');
-    toggle.querySelectorAll('button').forEach(b => b.setAttribute('aria-pressed', String(b.dataset.view === view)));
-  };
-  toggle.hidden = false;
-  setView(storage.get('mingkey-view') === 'list' ? 'list' : 'grid');
-  toggle.querySelectorAll('button').forEach(b => b.addEventListener('click', () => {
-    setView(b.dataset.view);
-    storage.set('mingkey-view', b.dataset.view);
-  }));
-});
 
 // Render / wireframe comparison
 const range = document.querySelector('#comparison-range');
@@ -89,19 +71,6 @@ if (copyButton && navigator.clipboard) {
     }
   });
 }
-
-// Compose form: opens the visitor's email app with the message filled in.
-// Nothing is sent from the page, and the status text says so.
-const composeForm = document.querySelector('.compose-form');
-composeForm?.addEventListener('submit', event => {
-  event.preventDefault();
-  const data = new FormData(composeForm);
-  const name = String(data.get('name')).trim();
-  const body = `Hi Mingjie,\n\n${String(data.get('body')).trim()}\n\n${name}`;
-  const url = `mailto:${composeForm.dataset.email}?subject=${encodeURIComponent(String(data.get('subject')).trim())}&body=${encodeURIComponent(body)}`;
-  composeForm.querySelector('.compose-status').textContent = `Your email app should open with the message ready to send. If nothing happens, email ${composeForm.dataset.email} directly.`;
-  window.location.href = url;
-});
 
 // Lightbox for case-study galleries. Without JavaScript the links open the image.
 const lightboxLinks = [...document.querySelectorAll('[data-lightbox]')];
@@ -160,56 +129,51 @@ if (lightboxLinks.length) {
 // Progressive enhancement: ordinary page scrolling, no scroll interception.
 const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
 const revealTargets = document.querySelectorAll([
-  '.split-copy', '.split-art', '.mission-art', '.mission-copy', '.label-row', '.work-head', '.card',
-  '.disc-list li', '.behind-main', '.step-card', '.film-card', '.films-head', '.explore-head', '.band-body', '.work-foot',
-  '.overview > *', '.project-lead', '.gallery-item', '.video-card', '.collage > a', '.statement', '.duo > a',
-  '.toolkit-grid > *', '.contact-intro', '.contact-art', '.compose-grid > *',
+  '.intro .section-label', '.intro h2', '.intro-bottom', '.section-heading', '.project-card', '.process-copy', '.comparison',
+  '.film-heading', '.film-preview', '.contact-top', '.page-lede', '.project-intro', '.project-lead', '.gallery-heading',
+  '.gallery-item', '.video-card', '.next-project', '.about-feature > *', '.discipline-list li', '.toolkit > *',
+  '.contact-panel > *', '.contact-art',
 ].join(', '));
-const heroImage = document.querySelector('.hero-bg');
-const heroSection = heroImage?.closest('section');
 const stage = document.querySelector('.showcase');
 const stageCanvas = document.querySelector('.stage-canvas');
 const stagePhoto = document.querySelector('.stage-photo');
 const stageTitle = document.querySelector('.stage-title');
-const drifters = [...document.querySelectorAll('[data-drift]')];
-const driftSection = drifters[0]?.closest('section');
+const star = document.querySelector('.orbit-star');
+const track = document.querySelector('.discipline-track');
 const progressLine = document.querySelector('.scroll-progress');
 const motionToggle = document.querySelector('.motion-toggle');
-const motionAnimated = [heroImage, stageCanvas, stagePhoto, stageTitle, progressLine, ...drifters].filter(Boolean);
+const motionAnimated = [stageCanvas, stagePhoto, stageTitle, star, track, progressLine].filter(Boolean);
 let revealObserver;
 let motionFrame = 0;
 let motionEnabled = false;
-let manualReducedMotion = storage.get('mingkey-motion') === 'off';
+let manualReducedMotion = false;
+try { manualReducedMotion = localStorage.getItem('mingkey-motion') === 'off'; } catch { /* storage unavailable */ }
 const clamp = (value, min = 0, max = 1) => Math.min(max, Math.max(min, value));
 
 function renderScrollMotion() {
   motionFrame = 0;
   if (!motionEnabled) return;
   const viewport = window.innerHeight;
-  const mobile = window.innerWidth <= 760;
+  const mobile = window.innerWidth <= 700;
   const scrollable = document.documentElement.scrollHeight - viewport;
   progressLine.style.transform = `scaleX(${scrollable > 0 ? clamp(window.scrollY / scrollable) : 0})`;
-  if (heroImage) {
-    const box = heroSection.getBoundingClientRect();
-    if (box.bottom > 0) heroImage.style.transform = `translateY(${clamp(-box.top / box.height) * 12}%) scale(1.06)`;
-  }
-  if (driftSection) {
-    const box = driftSection.getBoundingClientRect();
-    if (box.top < viewport && box.bottom > 0) {
-      // Words start in place and drift apart as the section scrolls past.
-      const progress = clamp((viewport - box.top) / (viewport + box.height));
-      drifters.forEach(word => { word.style.transform = `translateX(${progress * Number(word.dataset.drift) * (mobile ? 36 : 140)}px)`; });
-    }
-  }
   if (stage) {
-    // Read only the scene bounds; cards are handled by the observer.
+    // Read only the scene bounds; artwork cards are handled by the observer.
     const scene = stage.getBoundingClientRect();
-    const distance = Math.max(1, scene.height - viewport * (mobile ? .8 : 1));
+    const distance = Math.max(1, scene.height - viewport * (mobile ? .75 : 1));
     const sceneProgress = clamp(-scene.top / distance);
     if (scene.bottom > 0 && scene.top < viewport) {
-      stageCanvas.style.transform = `scale(${(mobile ? .94 : .88) + sceneProgress * (mobile ? .06 : .12)})`;
+      stageCanvas.style.transform = `scale(${(mobile ? .94 : .9) + sceneProgress * (mobile ? .06 : .1)})`;
       stagePhoto.style.transform = `scale(1.08) translateY(${sceneProgress * -3}%)`;
-      stageTitle.style.transform = `translateY(${(1 - sceneProgress) * 30}px)`;
+      stageTitle.style.transform = `translateY(${(1 - sceneProgress) * 25}px)`;
+    }
+  }
+  if (star) star.style.transform = `rotate(${-12 + Math.min(window.scrollY, viewport * 2) * .085}deg)`;
+  if (track) {
+    const band = track.parentElement.getBoundingClientRect();
+    if (band.top < viewport && band.bottom > 0) {
+      const bandProgress = clamp((viewport - band.top) / (viewport + band.height));
+      track.style.transform = `translateX(${-bandProgress * (mobile ? 180 : 430)}px)`;
     }
   }
 }
@@ -241,8 +205,7 @@ function configureMotion() {
   }, { threshold: .08, rootMargin: '0px 0px -25px 0px' });
   revealTargets.forEach(element => {
     element.dataset.reveal = '';
-    if (element.matches('.cards:not(.is-list) .card:nth-child(even), .gallery-item:nth-child(even), .film-card:nth-child(2), .collage > a:nth-child(2)')) element.style.setProperty('--reveal-delay', '100ms');
-    if (element.matches('.film-card:nth-child(3), .collage > a:nth-child(3)')) element.style.setProperty('--reveal-delay', '200ms');
+    if (element.matches('.project-card.offset, .index-grid .project-card:nth-child(3n+2), .gallery-item:nth-child(even)')) element.style.setProperty('--reveal-delay', '100ms');
     if (!element.classList.contains('is-visible')) revealObserver.observe(element);
   });
   requestScrollMotion();
@@ -255,7 +218,7 @@ document.addEventListener('focusin', event => event.target.closest('[data-reveal
 filterButtons.forEach(button => button.addEventListener('click', requestScrollMotion));
 motionToggle.addEventListener('click', () => {
   manualReducedMotion = !manualReducedMotion;
-  storage.set('mingkey-motion', manualReducedMotion ? 'off' : 'on');
+  try { localStorage.setItem('mingkey-motion', manualReducedMotion ? 'off' : 'on'); } catch { /* storage unavailable */ }
   configureMotion();
 });
 configureMotion();

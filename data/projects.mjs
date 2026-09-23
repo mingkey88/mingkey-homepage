@@ -1,6 +1,6 @@
 // Single source of truth for every project on the site.
-// After editing, run `node tools/build.mjs` to regenerate every page
-// (homepage, work index, case studies, about, contact, 404) and the sitemap.
+// After editing, run `node tools/build.mjs` to regenerate the work index,
+// case-study pages, homepage project grid and sitemap.
 //
 // Images are referenced by name: "companion" means assets/companion.webp
 // (full size) and assets/thumbs/companion.webp (grid size). Create both with
@@ -15,8 +15,6 @@ export const site = {
   owner: 'Mingjie Tan',
   url: 'https://mingkey88.github.io/mingkey-homepage/',
   email: 'mingjie.tan88@gmail.com',
-  location: 'Singapore',
-  coordinates: '1.3521° N, 103.8198° E',
 };
 
 export const categories = {
@@ -27,8 +25,7 @@ export const categories = {
 };
 
 // Order here is the order on the work index. `featured` projects also appear
-// on the homepage, in this order. `indexCard` overrides `card` for the image
-// shown on project cards.
+// on the homepage, in this order.
 export const projects = [
   {
     slug: 'ararush',
