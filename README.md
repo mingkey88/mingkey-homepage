@@ -1,6 +1,6 @@
 # mingkey Portfolio Site revamped
 
-The portfolio of Mingjie Tan: a homepage, a filterable work index, 14 case-study pages, About, Contact and a 404 page. Plain HTML, CSS and JavaScript, hosted on GitHub Pages. No framework and nothing to install for hosting.
+The portfolio of Mingjie Tan: a homepage, a filterable work index, 25 case-study pages, About, Contact and a 404 page. Plain HTML, CSS and JavaScript, hosted on GitHub Pages. No framework and nothing to install for hosting.
 
 - Live site: https://mingkey88.github.io/mingkey-homepage/
 - Original portfolio: https://mingjietan88.wixsite.com/mingkey

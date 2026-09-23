@@ -53,7 +53,7 @@ export const projects = [
     slug: 'companion',
     title: 'Companion',
     categories: ['illustration'],
-    label: 'Digital painting',
+    label: 'Digital painting / AI remaster',
     featured: true,
     summary: 'A digital painting of a warrior and a fantastical dragon companion in warm amber light.',
     intro: [
@@ -102,7 +102,7 @@ export const projects = [
     slug: 'sinister-sunny',
     title: 'Sinister Sunny',
     categories: ['illustration'],
-    label: 'Character illustration',
+    label: 'Character illustration / AI remaster',
     featured: true,
     summary: 'A character illustration with an unsettling edge: a girl in a red dress clutching a small doll.',
     intro: [
@@ -229,7 +229,7 @@ export const projects = [
     slug: 'spartan',
     title: 'Spartan',
     categories: ['illustration', '3d'],
-    label: 'Character design',
+    label: 'Character design / AI remaster',
     summary: 'A Spartan warrior, as a painted character illustration and as a 3D model.',
     intro: [
       'A Spartan warrior explored twice: as a painted character illustration with spear and shield, and as a 3D model.',
@@ -252,7 +252,7 @@ export const projects = [
     title: 'Vampire Hunter Kate',
     display: ['Vampire hunter', 'Kate'],
     categories: ['illustration'],
-    label: 'Character illustration',
+    label: 'Character illustration / AI remaster',
     summary: 'A character illustration of a vampire hunter in a wide-brimmed hat, red coat and tall boots.',
     intro: [
       'A character illustration of Kate, a vampire hunter in a wide-brimmed hat, red coat and tall boots.',
@@ -273,7 +273,7 @@ export const projects = [
     slug: 'king-kong',
     title: 'King Kong',
     categories: ['illustration'],
-    label: 'Character illustration',
+    label: 'Character illustration / AI remaster',
     summary: 'An armoured gorilla warrior with a great axe, painted against a burning orange sky.',
     intro: [
       'An armoured gorilla warrior with a great axe, painted against a burning orange sky.',
@@ -295,7 +295,7 @@ export const projects = [
     title: 'Transformers Fan Art',
     display: ['Transformers', 'fan art'],
     categories: ['illustration'],
-    label: 'Fan art / Digital painting',
+    label: 'Fan art / AI remaster',
     summary: 'A fan painting of Optimus Prime, inspired by Transformers: Dark of the Moon.',
     intro: [
       'A personal fan painting of Optimus Prime, inspired by Transformers: Dark of the Moon.',
@@ -309,6 +309,215 @@ export const projects = [
       ] },
       { heading: 'The original', items: [
         { image: 'transformers', alt: 'Optimus Prime in red and blue armour, raising a fiery blade', caption: 'Original fan painting' },
+      ] },
+    ],
+  },
+  {
+    slug: 'prosthetic-arm',
+    title: 'Prosthetic Arm',
+    display: ['Prosthetic', 'arm'],
+    categories: ['illustration'],
+    label: 'Character illustration / AI remaster',
+    summary: 'A woman with a prosthetic arm crouching against a concrete wall beside a large rifle.',
+    intro: [
+      'A woman with a prosthetic arm crouching against a concrete wall beside a large rifle.',
+    ],
+    notice: 'This image is an AI-regenerated version of one of my original digital paintings.',
+    card: { image: 'prosthetic-arm-ai', alt: 'Prosthetic Arm: a woman with a white prosthetic arm crouching barefoot against a concrete wall beside a large rifle' },
+    hero: 'prosthetic-arm-ai',
+    gallery: [
+      { items: [
+        { image: 'prosthetic-arm-ai', alt: 'A woman with a white prosthetic arm crouching barefoot against a concrete wall beside a large rifle', caption: 'Prosthetic Arm, AI-regenerated' },
+      ] },
+    ],
+  },
+  {
+    slug: 'futuristic-tank',
+    title: 'Futuristic Tank',
+    display: ['Futuristic', 'tank'],
+    categories: ['illustration'],
+    label: 'Vehicle design / AI remaster',
+    summary: 'A black and grey tank with orange stripes and clawed feet, parked on a rocky lakeshore below snowy mountains.',
+    intro: [
+      'A black and grey tank with orange stripes and clawed feet, parked on a rocky lakeshore below snowy mountains.',
+    ],
+    notice: 'This image is an AI-regenerated version of one of my original digital paintings.',
+    card: { image: 'futuristic-tank-ai', alt: 'Futuristic Tank: a black and grey futuristic tank with orange stripes and clawed feet on a rocky lakeshore below snowy mountains' },
+    hero: 'futuristic-tank-ai',
+    gallery: [
+      { items: [
+        { image: 'futuristic-tank-ai', alt: 'A black and grey futuristic tank with orange stripes and clawed feet on a rocky lakeshore below snowy mountains', caption: 'Futuristic Tank, AI-regenerated' },
+      ] },
+    ],
+  },
+  {
+    slug: 'waving-boy',
+    title: 'Waving Boy',
+    display: ['Waving', 'boy'],
+    categories: ['illustration'],
+    label: 'Character illustration / AI remaster',
+    summary: 'A cheerful boy with black hair and a red T-shirt, waving hello.',
+    intro: [
+      'A cheerful boy with black hair and a red T-shirt, waving hello.',
+    ],
+    notice: 'This image is an AI-regenerated version of one of my original digital paintings.',
+    card: { image: 'waving-boy-ai', alt: 'Waving Boy: a smiling boy with black hair in a red T-shirt waving, against a blue background', position: 'center 30%' },
+    hero: 'waving-boy-ai',
+    gallery: [
+      { items: [
+        { image: 'waving-boy-ai', alt: 'A smiling boy with black hair in a red T-shirt waving, against a blue background', caption: 'Waving Boy, AI-regenerated' },
+      ] },
+    ],
+  },
+  {
+    slug: 'reptile-brute',
+    title: 'Reptile Brute',
+    display: ['Reptile', 'brute'],
+    categories: ['illustration'],
+    label: 'Creature design / AI remaster',
+    summary: 'A muscular reptilian monster with a finned crest and clawed hands, standing in a glowing cave.',
+    intro: [
+      'A muscular reptilian monster with a finned crest and clawed hands, standing in a glowing cave.',
+    ],
+    notice: 'This image is an AI-regenerated version of one of my original digital paintings.',
+    card: { image: 'reptile-brute-ai', alt: 'Reptile Brute: a muscular green reptilian monster with a finned crest and clawed hands, standing in a glowing cave', position: 'center 25%' },
+    hero: 'reptile-brute-ai',
+    gallery: [
+      { items: [
+        { image: 'reptile-brute-ai', alt: 'A muscular green reptilian monster with a finned crest and clawed hands, standing in a glowing cave', caption: 'Reptile Brute, AI-regenerated' },
+      ] },
+    ],
+  },
+  {
+    slug: 'archer-fan-art',
+    title: 'Archer Fan Art',
+    display: ['Archer', 'fan art'],
+    categories: ['illustration'],
+    label: 'Fan art / AI remaster',
+    summary: 'A hooded archer in gold and black armour drawing a bow with a glowing teal arrow, inspired by League of Legends.',
+    intro: [
+      'A hooded archer in gold and black armour drawing a bow with a glowing teal arrow, inspired by League of Legends.',
+    ],
+    notice: ['This image is an AI-regenerated version of one of my original digital paintings.', 'League of Legends is a trademark of Riot Games. This is unofficial fan art.'],
+    card: { image: 'archer-ai', alt: 'Archer Fan Art: a hooded archer in gold and black armour drawing a bow with a glowing teal arrow' },
+    hero: 'archer-ai',
+    gallery: [
+      { items: [
+        { image: 'archer-ai', alt: 'A hooded archer in gold and black armour drawing a bow with a glowing teal arrow', caption: 'Archer Fan Art, AI-regenerated' },
+      ] },
+    ],
+  },
+  {
+    slug: 'red-armour',
+    title: 'Red Armour',
+    display: ['Red', 'armour'],
+    categories: ['illustration'],
+    label: 'Illustration / AI remaster',
+    summary: 'A soldier in red armour takes aim as a purple creature leaps through a burst of light, firing.',
+    intro: [
+      'A soldier in red armour takes aim as a purple creature leaps through a burst of light, firing.',
+    ],
+    notice: 'This image is an AI-regenerated version of one of my original digital paintings.',
+    card: { image: 'red-armour-ai', alt: 'Red Armour: a soldier in red armour aiming a rifle as a purple creature leaps through a burst of light, firing', position: '35% center' },
+    hero: 'red-armour-ai',
+    gallery: [
+      { items: [
+        { image: 'red-armour-ai', alt: 'A soldier in red armour aiming a rifle as a purple creature leaps through a burst of light, firing', caption: 'Red Armour, AI-regenerated' },
+      ] },
+    ],
+  },
+  {
+    slug: 'dragon-reaper',
+    title: 'Dragon Reaper',
+    display: ['Dragon', 'reaper'],
+    categories: ['illustration'],
+    label: 'Character illustration / AI remaster',
+    summary: 'A hooded skeletal reaper with a scythe, a dragon rising behind him over a burning landscape.',
+    intro: [
+      'A hooded skeletal reaper with a scythe, a dragon rising behind him over a burning landscape.',
+    ],
+    notice: 'This image is an AI-regenerated version of one of my original digital paintings.',
+    card: { image: 'dragon-reaper-ai', alt: 'Dragon Reaper: a hooded skeletal reaper holding a scythe, with a dragon rising behind him and a head half-buried at his feet', position: 'center 30%' },
+    hero: 'dragon-reaper-ai',
+    gallery: [
+      { items: [
+        { image: 'dragon-reaper-ai', alt: 'A hooded skeletal reaper holding a scythe, with a dragon rising behind him and a head half-buried at his feet', caption: 'Dragon Reaper, AI-regenerated' },
+      ] },
+    ],
+  },
+  {
+    slug: 'fire-wolverine',
+    title: 'Fire Wolverine',
+    display: ['Fire', 'wolverine'],
+    categories: ['illustration'],
+    label: 'Creature design / AI remaster',
+    summary: 'A snarling wolverine with yellow fur, purple horns and long claws, its back ablaze.',
+    intro: [
+      'A snarling wolverine with yellow fur, purple horns and long claws, its back ablaze.',
+    ],
+    notice: 'This image is an AI-regenerated version of one of my original digital paintings.',
+    card: { image: 'fire-wolverine-ai', alt: 'Fire Wolverine: a snarling wolverine with yellow fur, purple horns and long claws, its back ablaze with flames' },
+    hero: 'fire-wolverine-ai',
+    gallery: [
+      { items: [
+        { image: 'fire-wolverine-ai', alt: 'A snarling wolverine with yellow fur, purple horns and long claws, its back ablaze with flames', caption: 'Fire Wolverine, AI-regenerated' },
+      ] },
+    ],
+  },
+  {
+    slug: 'paladin-character-sheet',
+    title: 'Paladin Character Sheet',
+    display: ['Paladin', 'character sheet'],
+    categories: ['illustration'],
+    label: 'Character design / AI remaster',
+    summary: 'A character sheet for a paladin in purple and gold armour: a portrait bust plus front, side and back views.',
+    intro: [
+      'A character sheet for a paladin in purple and gold armour: a portrait bust plus front, side and back views.',
+    ],
+    notice: 'This image is an AI-regenerated version of one of my original digital paintings.',
+    card: { image: 'paladin-sheet-ai', alt: 'Paladin Character Sheet: character sheet of a female paladin in purple and gold armour with a long ponytail and arrows: a portrait plus front, side and back views', position: 'left center' },
+    hero: 'paladin-sheet-ai',
+    gallery: [
+      { items: [
+        { image: 'paladin-sheet-ai', alt: 'Character sheet of a female paladin in purple and gold armour with a long ponytail and arrows: a portrait plus front, side and back views', caption: 'Paladin Character Sheet, AI-regenerated' },
+      ] },
+    ],
+  },
+  {
+    slug: 'pirate-character-sheet',
+    title: 'Pirate Character Sheet',
+    display: ['Pirate', 'character sheet'],
+    categories: ['illustration'],
+    label: 'Character design / AI remaster',
+    summary: 'A character sheet for a pirate with a tricorn hat and twin swords: full figure, portrait and sword studies.',
+    intro: [
+      'A character sheet for a pirate with a tricorn hat and twin swords: full figure, portrait and sword studies.',
+    ],
+    notice: 'This image is an AI-regenerated version of one of my original digital paintings.',
+    card: { image: 'pirate-sheet-ai', alt: 'Pirate Character Sheet: character sheet of a female pirate with a tricorn hat and twin swords: full figure, portrait and sword studies', position: 'center center' },
+    hero: 'pirate-sheet-ai',
+    gallery: [
+      { items: [
+        { image: 'pirate-sheet-ai', alt: 'Character sheet of a female pirate with a tricorn hat and twin swords: full figure, portrait and sword studies', caption: 'Pirate Character Sheet, AI-regenerated' },
+      ] },
+    ],
+  },
+  {
+    slug: 'fire-sorceress',
+    title: 'Fire Sorceress',
+    display: ['Fire', 'sorceress'],
+    categories: ['illustration'],
+    label: 'Character illustration / AI remaster',
+    summary: 'A red-haired woman holding a flame in her raised hand, her full figure walking out of smoke and fire beside her.',
+    intro: [
+      'A red-haired woman holding a flame in her raised hand, her full figure walking out of smoke and fire beside her.',
+    ],
+    notice: 'This image is an AI-regenerated version of one of my original digital paintings.',
+    card: { image: 'fire-sorceress-ai', alt: 'Fire Sorceress: a red-haired woman holding a flame in her raised hand, with a smaller full-length figure of her walking out of smoke and fire', position: 'center 20%' },
+    hero: 'fire-sorceress-ai',
+    gallery: [
+      { items: [
+        { image: 'fire-sorceress-ai', alt: 'A red-haired woman holding a flame in her raised hand, with a smaller full-length figure of her walking out of smoke and fire', caption: 'Fire Sorceress, AI-regenerated' },
       ] },
     ],
   },

@@ -1,5 +1,12 @@
 # Site checks
 
+## Eleven more AI remakes — 23 September 2026
+
+- 11 projects added (25 in total). Browser checks pass with updated counts (All 25, Illustration 18, 3D & sculpture 7, Motion 2, Graphic design 1); single-image lightbox mode checked on Fire Wolverine.
+- No horizontal scroll at 320–1024px on any of the 30 pages; 155 local links and images return 200; no duplicate IDs.
+- Work index, a new case study (Archer Fan Art) and homepage cards visually reviewed.
+
+
 ## AI-regenerated artwork — 23 September 2026
 
 - Seven user-supplied AI remakes added (Companion, Sinister Sunny, Vampire Hunter Kate, King Kong, Transformers fan art, Spartan, plus an extra Ararush painting). Each case study's lightbox opens on the AI version, then the original, with the disclosure note shown.
